@@ -409,8 +409,10 @@
                         <span data-i18n="hero_hello">Hello, I'm</span> <span style="color:var(--text-main)">𝕄𝕆ℍ𝔸𝕄𝔼𝔻 𝕊𝔸𝕃𝔸ℍ </span>
                     </span>
                     <h1 class="animate-up">
-                        <span id="typewriter">Full Stack Developer</span><br>
-                        <span style="color:var(--secondary); font-size: 0.6em;" data-i18n="hero_erp">ERP & Automation Architect</span>
+                        <span id="typewriter"> Senior Full Stack </span><br>
+                        <span style="color:var(--secondary); font-size: 0.6em;" data-i18n="hero_erp">
+                        
+                            ERPNEXT Developer & Automation Architect         </span>
                     </h1>
                     <p class="hero-bio animate-up" data-i18n="hero_desc">
                         Senior Developer transforming business needs into robust technical solutions. Specialized in ERPNext infrastructure, Laravel platforms, and AI-driven automation workflows.
@@ -518,31 +520,176 @@
             </div>
         </section>
 
-        <section id="about" class="section" style="padding-bottom: 100px; background: var(--bg-body);">
-            <div class="container">
-                <h2 class="section-title" data-i18n="exp_title">Work Experience</h2>
-                <div class="timeline">
-                    <div class="timeline-card animate-up">
-                        <span style="color:var(--secondary); font-weight:bold;">2023 - Present</span>
-                        <h3 data-i18n="job1_title">Technical Team Lead</h3>
-                        <h4 style="color:var(--text-muted)">Sooqk Plus (Saudi Arabia)</h4>
-                        <p style="margin-top: 10px;" data-i18n="job1_desc">Orchestrating the development of a high-traffic multi-vendor marketplace. Managing a team of developers, overseeing CI/CD pipelines, and integrating payment gateways.</p>
-                    </div>
-                    <div class="timeline-card animate-up">
-                        <span style="color:var(--secondary); font-weight:bold;">2020 - Present</span>
-                        <h3 data-i18n="job2_title">Senior ERPNext Developer</h3>
-                        <h4 style="color:var(--text-muted)">Freelance Consultant</h4>
-                        <p style="margin-top: 10px;" data-i18n="job2_desc">Delivering tailored ERP solutions. Specialized in ZATCA (E-Invoicing) Phase 2 integration, custom Frappe modules for HR & Accounting, and API integrations.</p>
-                    </div>
-                    <div class="timeline-card animate-up">
-                        <span style="color:var(--secondary); font-weight:bold;">2017 - 2020</span>
-                        <h3 data-i18n="job3_title">Full Stack Developer</h3>
-                        <h4 style="color:var(--text-muted)">Digital Agencies</h4>
-                        <p style="margin-top: 10px;" data-i18n="job3_desc">Developed over 15+ responsive websites using Core PHP and MySQL. Optimized database queries and improved site performance scores.</p>
-                    </div>
-                </div>
+
+        <section id="experience" class="section" style="padding-bottom: 100px; background: var(--bg-body);">
+    <div class="container">
+        <h2 class="section-title" data-i18n="exp_title">Work Experience</h2>
+        <div class="timeline">
+            
+            <div class="timeline-card animate-up" onclick="openModal('modal-wm')">
+                <span style="color:var(--secondary); font-weight:bold;">2025 - Present</span>
+                <h3 data-i18n="job_wm_title">Website Manager & AI Specialist</h3>
+                <h4 style="color:var(--text-muted)">Sooqk Plus (Saudi Arabia - Remote)</h4>
+                <p style="margin-top: 10px;" data-i18n="job_wm_desc">
+                    Architecting autonomous AI agents using Python and n8n to streamline complex business logic for enterprises in EGY/KSA.
+                </p>
+                <button class="read-more-btn">View Details & Contact</button>
             </div>
-        </section>
+
+            <div class="timeline-card animate-up" onclick="openModal('modal-aa')">
+                <span style="color:var(--secondary); font-weight:bold;">2025 - Present</span>
+                <h3 data-i18n="job_aa_title">Automation Architect</h3>
+                <h4 style="color:var(--text-muted)">Freelancer</h4>
+                <p style="margin-top: 10px;" data-i18n="job_aa_desc">
+                    Optimizing API orchestration between diverse software ecosystems and integrating LLMs to enhance decision-making processes.
+                </p>
+                <button class="read-more-btn">View Details & Contact</button>
+            </div>
+
+            <div class="timeline-card animate-up" onclick="openModal('modal-erp')">
+                <span style="color:var(--secondary); font-weight:bold;">2024 - Present</span>
+                <h3 data-i18n="job_erp_title">Senior ERPNext Developer</h3>
+                <h4 style="color:var(--text-muted)">Freelance (Riyadh, KSA)</h4>
+                <p style="margin-top: 10px;" data-i18n="job_erp_desc">
+                    Leading end-to-end implementation of ERPNext solutions, specializing in ZATCA integration and custom Frappe modules.
+                </p>
+                <button class="read-more-btn">View Details & Contact</button>
+            </div>
+
+            <div class="timeline-card animate-up" onclick="openModal('modal-fs-gdg')">
+                <span style="color:var(--secondary); font-weight:bold;">2020 - 2025</span>
+                <h3 data-i18n="job_gdg_title">Full Stack Developer</h3>
+                <h4 style="color:var(--text-muted)">GDG Company (Egypt)</h4>
+                <p style="margin-top: 10px;" data-i18n="job_gdg_desc">
+                    Designed and deployed robust Full Stack architectures, ensuring high performance and seamless integration between systems.
+                </p>
+                <button class="read-more-btn">View Details & Contact</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<div id="modal-container">
+    <div id="modal-wm" class="custom-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-wm')">&times;</span>
+            <h2>Website Manager & AI Specialist</h2>
+            <p><strong>Experience Highlights:</strong></p>
+            <ul>
+                <li>Engineered custom Python-based AI agents integrated with n8n to automate 70% of manual data entry for e-commerce.</li>
+                <li>Developing predictive data analysis scripts and integrating LLMs into existing business workflows.</li>
+                <li>Managing platforms: sooqkplus.com, diwanzakat.com, and others.</li>
+            </ul>
+            <div class="modal-footer">
+                <a href="https://wa.me/YOUR_NUMBER" class="whatsapp-link"><i class="fab fa-whatsapp"></i> Discuss this expertise</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-erp" class="custom-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('modal-erp')">&times;</span>
+            <h2>Senior ERPNext Developer</h2>
+            <p><strong>Key Achievement:</strong></p>
+            <p>Engineered a custom "General Ledger with Voucher Details" report within Frappe, saving thousands of Riyals in annual infrastructure costs.</p>
+            <ul>
+                <li>ZATCA Phase 2 integration for Saudi Arabian market.</li>
+                <li>Customizing core ERP functions to align with GCC business requirements.</li>
+            </ul>
+            <div class="modal-footer">
+                <a href="https://wa.me/YOUR_NUMBER" class="whatsapp-link"><i class="fab fa-whatsapp"></i> Inquiry about ERP solutions</a>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<style>
+/* CSS للتصميم المطور */
+.timeline-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.timeline-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    border-color: var(--secondary);
+}
+.read-more-btn {
+    background: transparent;
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    padding: 5px 15px;
+    margin-top: 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+/* Modal Styles */
+.custom-modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0; width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+.modal-content {
+    background-color: #1a1a1a;
+    margin: 10% auto;
+    padding: 30px;
+    border: 1px solid var(--secondary);
+    width: 80%;
+    max-width: 600px;
+    border-radius: 15px;
+    color: white;
+    position: relative;
+}
+.close-modal {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 28px; font-weight: bold; cursor: pointer; color: var(--secondary);
+}
+.modal-footer {
+    margin-top: 25px;
+    border-top: 1px solid #333;
+    padding-top: 15px;
+    text-align: center;
+}
+.whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+
+<script>
+function openModal(id) {
+    document.getElementById(id).style.display = "block";
+}
+function closeModal(id) {
+    document.getElementById(id).style.display = "none";
+}
+// إغلاق النافذة عند الضغط خارجها
+window.onclick = function(event) {
+    if (event.target.className === 'custom-modal') {
+        event.target.style.display = "none";
+    }
+}
+</script>
+
+
+        
+
+        
 
         <section id="portfolio" class="section" style="padding: 100px 0;">
             <div class="container">
