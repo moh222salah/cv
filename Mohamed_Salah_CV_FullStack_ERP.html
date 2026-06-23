@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Mohamed Salah — Senior Full Stack & ERPNext Developer</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap');
+
+  @page { size: A4; margin: 12mm 14mm; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  :root {
+    --ink:   #0d1720;
+    --mid:   #334455;
+    --soft:  #677d90;
+    --rule:  #c2ced8;
+    --gold:  #9e6b20;
+    --glt:   #f5efe4;
+    --page:  #fafaf8;
+    --serif: 'Libre Baskerville', Georgia, serif;
+    --sans:  'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+  }
+
+  body {
+    background: var(--page);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 9.2pt;
+    line-height: 1.53;
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 12mm 14mm;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ══ HEADER ══ */
+  .cv-name {
+    font-family: var(--serif);
+    font-size: 23.5pt;
+    font-weight: 700;
+    color: var(--ink);
+    letter-spacing: -0.4px;
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .cv-title {
+    font-size: 9.6pt;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+  }
+  .cv-contact {
+    font-size: 8.3pt;
+    color: var(--mid);
+    line-height: 1.78;
+  }
+  .cv-contact a { color: var(--mid); text-decoration: none; }
+  .sep { color: var(--rule); margin: 0 5px; }
+  .header-rule { border: none; border-top: 2px solid var(--ink); margin: 9px 0 0; }
+
+  /* ══ SECTION TITLE ══ */
+  .st {
+    font-size: 7.5pt;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: var(--gold);
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 3px;
+    margin: 13px 0 9px;
+  }
+
+  /* ══ SUMMARY ══ */
+  .summary { font-size: 9.2pt; color: var(--mid); line-height: 1.65; }
+  .summary strong { color: var(--ink); font-weight: 700; }
+
+  /* ══ CAREER HIGHLIGHTS — ATS-safe bullets, 2-col visual ══ */
+  ul.hl {
+    columns: 2;
+    column-gap: 22px;
+    padding-left: 14px;
+  }
+  ul.hl li {
+    font-size: 8.9pt;
+    color: var(--mid);
+    line-height: 1.52;
+    margin-bottom: 4px;
+    break-inside: avoid;
+  }
+  ul.hl li strong { color: var(--ink); }
+
+  /* ══ CORE COMPETENCIES ══ */
+  .comp-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px 8px;
+  }
+  .comp-item {
+    font-size: 8.1pt;
+    color: var(--mid);
+    padding: 2px 0 2px 6px;
+    border-left: 2px solid var(--gold);
+    line-height: 1.35;
+  }
+
+  /* ══ EXPERIENCE ══ */
+  .job { margin-bottom: 12px; }
+  .job:last-child { margin-bottom: 0; }
+
+  .jh { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 1px; }
+  .jtitle { font-family: var(--serif); font-size: 10pt; font-weight: 700; color: var(--ink); }
+  .jdate  { font-size: 7.9pt; font-weight: 700; color: var(--soft); white-space: nowrap; margin-left: 10px; padding-top: 2px; }
+  .jorg   { font-size: 8.6pt; font-weight: 600; color: var(--gold); margin-bottom: 5px; }
+  .jorg .loc { color: var(--soft); font-weight: 400; }
+
+  ul.b { padding-left: 13px; margin-bottom: 5px; }
+  ul.b li { margin-bottom: 3.5px; color: var(--mid); font-size: 8.9pt; line-height: 1.52; }
+  ul.b li strong { color: var(--ink); }
+
+  .ach {
+    background: var(--glt);
+    border-left: 2.5px solid var(--gold);
+    padding: 5px 9px;
+    margin: 5px 0 4px;
+    border-radius: 0 3px 3px 0;
+  }
+  .ach .al {
+    font-size: 7pt;
+    font-weight: 700;
+    color: var(--gold);
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .ach p { font-size: 8.8pt; color: var(--ink); line-height: 1.53; }
+
+  .stk { font-size: 7.7pt; color: var(--soft); margin-top: 3px; }
+  .stk strong { color: var(--mid); }
+
+  /* ══ PROJECTS ══ */
+  .proj { margin-bottom: 8px; }
+  .ph { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+  .pname { font-weight: 700; font-size: 9pt; color: var(--ink); }
+  .ptag  {
+    font-size: 7pt; font-weight: 700; color: var(--gold);
+    letter-spacing: 0.4px; text-transform: uppercase;
+    background: var(--glt); padding: 1px 5px; border-radius: 2px;
+  }
+  .pdesc { font-size: 8.5pt; color: var(--mid); line-height: 1.5; margin-bottom: 2px; }
+  .pstk  { font-size: 7.6pt; color: var(--soft); }
+  .plink { font-size: 7.6pt; color: var(--gold); text-decoration: none; }
+
+  /* ══ SKILLS ══ */
+  .sk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+  .sk-label { font-size: 7.7pt; font-weight: 700; color: var(--ink); text-transform: uppercase; letter-spacing: 0.6px; margin-bottom: 1px; }
+  .sk-items { font-size: 8.5pt; color: var(--mid); line-height: 1.52; }
+
+  /* ══ EDU / CERTS ══ */
+  .edu-title { font-weight: 700; font-size: 9pt; color: var(--ink); }
+  .edu-sub   { font-size: 8.3pt; color: var(--mid); }
+  .edu-note  { font-size: 7.8pt; color: var(--soft); font-style: italic; margin-bottom: 4px; }
+
+  .cert-row { display: flex; justify-content: space-between; font-size: 8.3pt; color: var(--mid); margin-bottom: 3px; }
+  .cert-row strong { color: var(--ink); }
+  .cyr { color: var(--soft); font-size: 7.9pt; }
+
+  /* ══ LANGUAGES ══ */
+  .lang-row { display: flex; gap: 26px; font-size: 9pt; }
+  .ln { font-weight: 700; color: var(--ink); }
+  .ll { color: var(--soft); }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .ach { background: #fdf4e4; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════
+     HEADER
+══════════════════════════════════ -->
+<div class="cv-name">Mohamed Salah</div>
+<div class="cv-title">Senior Full Stack &amp; ERPNext Developer &nbsp;|&nbsp; Business Automation Specialist</div>
+<div class="cv-contact">
+  Giza, Egypt <span class="sep">|</span> Open to Relocation — KSA / UAE <span class="sep">|</span> +20 111 390 3070 <span class="sep">|</span> <a href="mailto:Moh222salah@gmail.com">Moh222salah@gmail.com</a> <span class="sep">|</span> <a href="https://linkedin.com/in/mo222salah">linkedin.com/in/mo222salah</a><br/>
+  Portfolio: <a href="https://moh222salah.github.io/cv">moh222salah.github.io/cv</a>
+  <span class="sep">|</span> Project Demos: <a href="https://moh222salah.github.io/vipsystem">moh222salah.github.io/vipsystem</a>
+  <span class="sep">|</span> GitHub: <a href="https://github.com/moh222salah">github.com/moh222salah</a>
+</div>
+<hr class="header-rule"/>
+
+<!-- ══════════════════════════════════
+     PROFESSIONAL SUMMARY
+══════════════════════════════════ -->
+<div class="st">Professional Summary</div>
+<p class="summary">
+  Senior Full Stack Developer and ERPNext Specialist with <strong>6+ years of experience</strong> (since October 2019)
+  delivering scalable web applications, end-to-end ERP implementations, and business automation systems across
+  <strong>Egypt, Saudi Arabia, Kuwait, and Sweden</strong>. Completed <strong>4 full ERPNext go-live projects</strong>
+  across manufacturing, trading, real estate, and healthcare sectors, including
+  <strong>ZATCA Phase 1 &amp; 2 e-invoicing compliance</strong> for Saudi clients. Built and shipped
+  <strong>20+ production web applications</strong> using Laravel and React.js across multi-sector client portfolios.
+  Delivered <strong>enterprise automation systems</strong> for a Kuwaiti law firm (2025) and is currently
+  building a <strong>full automation suite</strong> for NordicBizHub (Sweden, 2026) — covering payment gateway
+  integrations (Klarna, Swish, Stripe, PayPal), proposal generation workflows, and multi-system orchestration.
+  Hybrid technical-functional profile combining <strong>deep backend and ERP development</strong> with
+  client-facing consulting, business process analysis, and GCC regulatory expertise.
+  Available for <strong>remote and on-site roles</strong> across KSA, UAE, and Egypt.
+</p>
+
+<!-- ══════════════════════════════════
+     CAREER HIGHLIGHTS
+══════════════════════════════════ -->
+<div class="st">Career Highlights</div>
+<ul class="hl">
+  <li>Delivered <strong>4 ERPNext Go-Live Projects</strong> across Manufacturing, Trading, Real Estate &amp; Healthcare</li>
+  <li>Implemented <strong>ZATCA Phase 1 &amp; Phase 2</strong> E-Invoicing Compliance for 3 Saudi Clients</li>
+  <li>Shipped <strong>20+ Production Web Applications</strong> across Fintech, Real Estate &amp; E-Commerce</li>
+  <li>Generated <strong>SAR 40,000+ Annual Savings</strong> via Custom ERP Process Optimisation</li>
+  <li>Built Full Automation Suite for <strong>Swedish SaaS Client</strong> — Klarna, Swish, Stripe &amp; Proposal Workflows</li>
+  <li>Delivered Multi-Workflow Automation System for <strong>Kuwaiti Law Firm</strong> — Case, Doc &amp; Billing Flows</li>
+  <li>Reduced Month-End Reconciliation by <strong>88%</strong> via Custom Frappe Script Report Engineering</li>
+  <li>Built <strong>Multi-Tenant SaaS Accounting Platform</strong> (VIP System) serving active finance clients</li>
+</ul>
+
+<!-- ══════════════════════════════════
+     CORE COMPETENCIES
+══════════════════════════════════ -->
+<div class="st">Core Competencies</div>
+<div class="comp-grid">
+  <div class="comp-item">Full Stack Web Development</div>
+  <div class="comp-item">ERPNext Implementation &amp; Go-Live</div>
+  <div class="comp-item">Frappe Framework &amp; Python</div>
+  <div class="comp-item">ZATCA E-Invoicing (Phase 1 &amp; 2)</div>
+  <div class="comp-item">Laravel &amp; PHP Architecture</div>
+  <div class="comp-item">React.js &amp; Vue.js Front-End</div>
+  <div class="comp-item">REST API Design &amp; Integration</div>
+  <div class="comp-item">Business Process Automation</div>
+  <div class="comp-item">n8n Workflow Orchestration</div>
+  <div class="comp-item">Payment Gateway Integration</div>
+  <div class="comp-item">Multi-System Integration</div>
+  <div class="comp-item">SaaS Platform Architecture</div>
+  <div class="comp-item">GCC VAT &amp; Tax Compliance</div>
+  <div class="comp-item">Business Process Analysis</div>
+  <div class="comp-item">ERP Training &amp; Onboarding</div>
+  <div class="comp-item">MariaDB / MySQL Optimisation</div>
+</div>
+
+<!-- ══════════════════════════════════
+     WORK EXPERIENCE
+══════════════════════════════════ -->
+<div class="st">Work Experience</div>
+
+<!-- ── ROLE 1: NORDIC ── -->
+<div class="job">
+  <div class="jh">
+    <div class="jtitle">Business Automation Engineer</div>
+    <div class="jdate">Jan 2026 – Present</div>
+  </div>
+  <div class="jorg">NordicBizHub <span class="loc">· Sweden (Remote)</span></div>
+  <ul class="b">
+    <li>Architecting and delivering a <strong>full business automation suite</strong> for a Swedish SaaS company — covering payment gateway integrations, automated proposal generation, order management workflows, and multi-system data synchronisation.</li>
+    <li>Integrated <strong>Klarna, Swish, Stripe, and PayPal</strong> payment gateways via n8n workflow orchestration — enabling automated payment routing, confirmation handling, and reconciliation across the client's operational stack.</li>
+    <li>Built an <strong>automated proposal and order generation workflow</strong> — reducing proposal turnaround from manual multi-hour preparation to a sub-5-minute automated pipeline triggered by CRM events.</li>
+    <li>Designed and implemented <strong>multi-system data synchronisation</strong> between the client's ERP, CRM, and e-commerce platform — eliminating manual cross-system data entry and reducing operational errors.</li>
+    <li>Diagnosed and resolved critical <strong>n8n workflow bugs</strong> across production automation pipelines — restoring interrupted data flows and implementing error-handling and retry logic for production stability.</li>
+  </ul>
+  <div class="ach">
+    <div class="al">Key Achievement</div>
+    <p>Delivered a <strong>fully automated proposal-to-payment pipeline</strong> connecting CRM triggers → proposal generation → payment gateway confirmation → ERP order creation — compressing a previously 3-hour manual workflow into an automated end-to-end process running in under 10 minutes, eliminating coordination overhead across 4 separate business systems.</p>
+  </div>
+  <div class="stk"><strong>Stack:</strong> n8n · Klarna API · Swish API · Stripe · PayPal · REST API · Webhooks · JSON · Docker · Git</div>
+</div>
+
+<!-- ── ROLE 2: ERP ── -->
+<div class="job">
+  <div class="jh">
+    <div class="jtitle">Senior ERPNext Consultant &amp; Frappe Developer</div>
+    <div class="jdate">Jan 2024 – Present</div>
+  </div>
+  <div class="jorg">Independent Consultant <span class="loc">· Egypt &amp; Saudi Arabia (Remote / On-site)</span></div>
+  <ul class="b">
+    <li>Led <strong>4 end-to-end ERPNext implementations</strong> across manufacturing, trading, real estate, and healthcare — directing full project lifecycle from executive requirements workshops and business process mapping through system configuration, data migration, UAT, and go-live hypercare.</li>
+    <li>Directed <strong>ZATCA Phase 1 and Phase 2 e-invoicing compliance</strong> for 3 Saudi clients — implementing UBL 2.1 XML generation, ECDSA cryptographic stamping, TLV QR encoding, and FATOORA clearance API integration, achieving full regulatory compliance ahead of mandated deadlines.</li>
+    <li>Engineered <strong>custom Frappe modules</strong> including multi-branch accounting consolidation, automated VAT return reporting, role-based approval workflows, and custom doctypes aligned with GCC business requirements — reducing month-end reporting preparation from 3 days to under 4 hours.</li>
+    <li>Coordinated implementation activities across <strong>finance, procurement, HR, operations, and executive stakeholders</strong> — facilitating cross-functional alignment, managing change resistance, and ensuring smooth adoption across all departments.</li>
+    <li>Managed <strong>ERP training and change management programmes</strong> — delivering structured onboarding sessions for accounting, operations, and procurement teams, and providing post-go-live hypercare support.</li>
+  </ul>
+  <div class="ach">
+    <div class="al">Key Achievement</div>
+    <p>Engineered a custom <strong>General Ledger Voucher Detail script report</strong> in Frappe/ERPNext for a Saudi manufacturing client — replacing a 3-day manual reconciliation process with an automated 4-hour workflow, reducing month-end accounting close time by <strong>88%</strong> and generating estimated annual savings of <strong>SAR 40,000+</strong> through optimised MariaDB query architecture and server-side Frappe scripting.</p>
+  </div>
+  <div class="stk"><strong>Stack:</strong> ERPNext v14/v15 · Frappe Framework · Python · MariaDB · SQL · JavaScript · Linux · ZATCA API · UBL 2.1 XML</div>
+</div>
+
+<!-- ── ROLE 3: LAW FIRM ── -->
+<div class="job">
+  <div class="jh">
+    <div class="jtitle">Automation Systems Developer</div>
+    <div class="jdate">2025</div>
+  </div>
+  <div class="jorg">Al-Jasim Law Firm <span class="loc">· Kuwait (Remote)</span></div>
+  <ul class="b">
+    <li>Designed and delivered a <strong>multi-workflow automation system</strong> for a Kuwaiti law firm — covering client intake, case management, legal document automation, billing workflows, and deadline notification pipelines.</li>
+    <li>Built an <strong>automated legal document generation system</strong> — enabling the firm to produce templated contracts, case summaries, and client correspondence from structured data inputs, eliminating manual document drafting overhead.</li>
+    <li>Implemented <strong>case status tracking and deadline alert workflows</strong> — automatically notifying lawyers and clients of hearing dates, document deadlines, and action items via email and messaging integrations.</li>
+    <li>Integrated <strong>billing and invoicing automation</strong> — connecting case milestones to automatic invoice generation and client notification, reducing billing cycle time and manual accounts-receivable overhead.</li>
+  </ul>
+  <div class="ach">
+    <div class="al">Key Achievement</div>
+    <p>Delivered a <strong>unified case lifecycle automation system</strong> — from client onboarding through active case management, document generation, deadline tracking, and billing — replacing 5 separate manual processes with a single integrated workflow suite, reducing administrative overhead by an estimated <strong>70%</strong> for the firm's operations team.</p>
+  </div>
+  <div class="stk"><strong>Stack:</strong> n8n · REST API · Webhooks · Document Templates · Email Integration · Automation Pipelines</div>
+</div>
+
+<!-- ── ROLE 4: FULL STACK ── -->
+<div class="job">
+  <div class="jh">
+    <div class="jtitle">Senior Full Stack Developer</div>
+    <div class="jdate">Oct 2019 – Present</div>
+  </div>
+  <div class="jorg">Independent Consultant <span class="loc">· Egypt &amp; Saudi Arabia (Remote / Project-based)</span></div>
+  <ul class="b">
+    <li>Delivered <strong>20+ custom web applications</strong> for clients across fintech, real estate, healthcare, and e-commerce — architecting full-stack solutions using Laravel, React.js, and MySQL from business requirements through production deployment and ongoing support.</li>
+    <li>Built and launched <strong>VIP Accounting System</strong> — a multi-tenant SaaS accounting platform with role-based access control, multi-currency ledger, automated PDF financial reporting engine, and client self-service portal; currently serving active finance-intensive client workflows.</li>
+    <li>Built <strong>CampaignOS</strong> — a multi-channel bulk campaign automation platform with CSV contact import (SheetJS), email and WhatsApp delivery, real-time analytics dashboard, template personalisation engine, and scheduled execution.</li>
+    <li>Developed <strong>RESTful API architectures</strong> for mobile and third-party integrations — implementing JWT authentication, OAuth2, API versioning, and rate-limiting across production applications serving active client bases in Egypt and KSA.</li>
+    <li>Architected a <strong>real estate villa and chalet management MVP</strong> for a Saudi developer — bilingual (AR/EN), role-based access, admin dashboard, and unit availability tracking built on React.js with a Laravel API backend.</li>
+  </ul>
+  <div class="stk"><strong>Stack:</strong> PHP · Laravel · React.js · Vue.js · JavaScript · MySQL · RESTful APIs · JWT · OAuth2 · TailwindCSS · Docker · Git</div>
+</div>
+
+<!-- ══════════════════════════════════
+     SELECTED PROJECTS
+══════════════════════════════════ -->
+<div class="st">Selected Projects</div>
+
+<div class="proj">
+  <div class="ph">
+    <span class="pname">NordicBizHub — Full Business Automation Suite</span>
+    <span class="ptag">Automation · SaaS · Sweden</span>
+  </div>
+  <p class="pdesc">End-to-end automation suite for a Swedish SaaS company — Klarna, Swish, Stripe &amp; PayPal payment gateway integrations, automated proposal generation, order management workflows, and multi-system synchronisation across ERP, CRM, and e-commerce platforms via n8n orchestration.</p>
+  <div class="pstk">n8n · Klarna API · Swish API · Stripe · PayPal · REST API · Webhooks · Docker</div>
+</div>
+
+<div class="proj">
+  <div class="ph">
+    <span class="pname">ZATCA Phase 1 &amp; 2 E-Invoicing Module — ERPNext/Frappe</span>
+    <span class="ptag">ERP · Compliance · KSA</span>
+  </div>
+  <p class="pdesc">Custom ZATCA compliance module within Frappe — UBL 2.1 XML invoice generation, ECDSA cryptographic stamping, TLV QR encoding, and FATOORA clearance API integration. Delivered for 3 Saudi clients in manufacturing and trading, achieving full Phase 2 compliance ahead of regulatory deadlines.</p>
+  <div class="pstk">Python · Frappe · ERPNext v14 · MariaDB · ZATCA API · XML · Linux</div>
+</div>
+
+<div class="proj">
+  <div class="ph">
+    <span class="pname">Al-Jasim Law Firm — Legal Workflow Automation System</span>
+    <span class="ptag">Automation · Legal · Kuwait</span>
+  </div>
+  <p class="pdesc">Multi-workflow automation system covering client intake, case management, legal document generation, billing automation, and deadline notification pipelines. Reduced administrative overhead by an estimated 70% for the firm's operations team.</p>
+  <div class="pstk">n8n · REST API · Document Templates · Email Integration · Webhook Pipelines</div>
+</div>
+
+<div class="proj">
+  <div class="ph">
+    <span class="pname">VIP Accounting System — Multi-Tenant SaaS Platform</span>
+    <span class="ptag">SaaS · Fintech</span>
+  </div>
+  <p class="pdesc">Multi-tenant cloud accounting platform with role-based access control, multi-currency ledger, automated PDF financial reports, and client portal. Serving active finance-intensive workflows in production.</p>
+  <div class="pstk">Laravel · React.js · MySQL · REST API · TailwindCSS &nbsp;·&nbsp; <a class="plink" href="https://moh222salah.github.io/vipsystem">Live Demo →</a></div>
+</div>
+
+<div class="proj">
+  <div class="ph">
+    <span class="pname">General Ledger Voucher Detail — Custom Frappe Script Report</span>
+    <span class="ptag">ERPNext · Finance</span>
+  </div>
+  <p class="pdesc">Advanced script report dynamically mapping GL entries to source voucher rows — resolving a cloud server memory constraint and replacing 3-day manual reconciliation with a 4-hour automated workflow. Saved SAR 40,000+ annually for a Saudi manufacturing client.</p>
+  <div class="pstk">Python · Frappe Framework · MariaDB · SQL · ERPNext v14</div>
+</div>
+
+<div class="proj">
+  <div class="ph">
+    <span class="pname">CampaignOS — Multi-Channel Campaign Automation</span>
+    <span class="ptag">Automation · MarTech</span>
+  </div>
+  <p class="pdesc">Bulk email and WhatsApp campaign platform with CSV contact import, template personalisation engine, delivery analytics, and scheduled execution — built for enterprise-scale outreach without technical overhead.</p>
+  <div class="pstk">JavaScript · SheetJS · EmailJS · WhatsApp Business API · TailwindCSS</div>
+</div>
+
+<!-- ══════════════════════════════════
+     TECHNICAL SKILLS
+══════════════════════════════════ -->
+<div class="st">Technical Skills</div>
+<div class="sk-grid">
+  <div>
+    <div class="sk-label">Full Stack Development</div>
+    <div class="sk-items">PHP · Laravel · Python · React.js · Vue.js · JavaScript (ES6+) · TypeScript · TailwindCSS · HTML5 · CSS3 · Responsive Design · Arabic RTL · Jinja2</div>
+  </div>
+  <div>
+    <div class="sk-label">ERP &amp; Frappe</div>
+    <div class="sk-items">ERPNext v14/v15 · Frappe Framework · Custom Doctypes · Server Scripts · Script Reports · Client Scripts · Hooks · Patch Files · ZATCA E-Invoicing (Phase 1 &amp; 2) · UBL 2.1 XML · VAT Compliance · Multi-Branch Accounting</div>
+  </div>
+  <div>
+    <div class="sk-label">Automation &amp; Integration</div>
+    <div class="sk-items">n8n · Workflow Orchestration · Klarna API · Swish API · Stripe · PayPal · WhatsApp Business API · REST API Design · Webhooks · OAuth2 · JWT · API Versioning · Multi-System Integration</div>
+  </div>
+  <div>
+    <div class="sk-label">AI &amp; LLM Integration</div>
+    <div class="sk-items">OpenAI API · LLM Integration · Prompt Engineering · Agentic AI Workflows · Document Intelligence · Automated Data Extraction · AI-Powered Pipelines</div>
+  </div>
+  <div>
+    <div class="sk-label">Database &amp; DevOps</div>
+    <div class="sk-items">MySQL · MariaDB · PostgreSQL · SQL Query Optimisation · Docker · Git · GitHub · CI/CD (GitHub Actions) · Linux Server Administration · Nginx · Bash Scripting</div>
+  </div>
+  <div>
+    <div class="sk-label">Consulting &amp; Methodology</div>
+    <div class="sk-items">Agile · Scrum · Business Process Analysis · Requirements Gathering · Gap Analysis · ERP Change Management · Stakeholder Workshops · User Training &amp; Onboarding · Technical Documentation · Solution Architecture</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════
+     EDUCATION
+══════════════════════════════════ -->
+<div class="st">Education</div>
+<div class="edu-title">Bachelor of Laws (LL.B.)</div>
+<div class="edu-sub">Cairo University · 2015</div>
+<div class="edu-note">Professional transition into Software Engineering — October 2019</div>
+
+<!-- ══════════════════════════════════
+     CERTIFICATIONS
+══════════════════════════════════ -->
+<div class="st">Certifications</div>
+<div class="cert-row"><span><strong>Google</strong> — IT Automation with Python Professional Certificate</span><span class="cyr">2025</span></div>
+<div class="cert-row"><span><strong>Microsoft</strong> — Cloud Flows in Power Automate</span><span class="cyr">2025</span></div>
+<div class="cert-row"><span><strong>Udemy</strong> — n8n: Build Intelligent AI 2.0 Agent Systems</span><span class="cyr">2025</span></div>
+<div class="cert-row"><span><strong>Microsoft</strong> — Advertising Certification</span><span class="cyr">2023</span></div>
+<div class="cert-row"><span><strong>Google</strong> — Digital Garage: Fundamentals of Digital Marketing</span><span class="cyr">2023</span></div>
+<div class="cert-row"><span><strong>NEN</strong> — Full Stack Web Development Certificate</span><span class="cyr">2020</span></div>
+
+<!-- ══════════════════════════════════
+     LANGUAGES
+══════════════════════════════════ -->
+<div class="st">Languages</div>
+<div class="lang-row">
+  <div><span class="ln">Arabic</span> <span class="ll">— Native</span></div>
+  <div><span class="ln">English</span> <span class="ll">— Professional Working Proficiency (B2+)</span></div>
+</div>
+
+</body>
+</html>
