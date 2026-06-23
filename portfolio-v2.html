@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Mohamed Salah — Senior Full Stack & ERP Developer</title>
+<meta name="description" content="Senior Full Stack & ERP Developer with 6 years delivering ERP implementations, ZATCA compliance, and AI automation across Egypt and the GCC.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<style>
+:root{
+  --ink:#0B0E14; --ink-2:#10141C; --ink-3:#161B26; --ink-4:#1C2230;
+  --paper:#F7F5F0; --paper-2:#FFFFFF;
+  --verified:#1A6E5C; --verified-light:#2E9A7F;
+  --gold:#C9A24A; --gold-light:#E0BD6E; --gold-dim:#8A6F33;
+  --text-d:#F4F0E6; --text-d-dim:#9AA3AE;
+  --text-l:#0B0E14; --text-l-dim:#5A6472;
+  --line-d:rgba(244,240,230,.08); --line-d-strong:rgba(244,240,230,.16);
+  --line-l:rgba(11,14,20,.08); --line-l-strong:rgba(11,14,20,.14);
+  --disp:'Space Grotesk',sans-serif; --body:'Inter',sans-serif; --mono:'JetBrains Mono',monospace;
+  --disp-ar:'Tajawal',sans-serif; --body-ar:'IBM Plex Sans Arabic',sans-serif;
+  --r-sm:8px; --r-md:14px; --r-lg:22px; --r-xl:32px;
+  --bg:var(--ink); --bg-2:var(--ink-2); --bg-3:var(--ink-3); --bg-4:var(--ink-4);
+  --text:var(--text-d); --text-dim:var(--text-d-dim); --line:var(--line-d); --line-strong:var(--line-d-strong);
+  --shadow-md:0 12px 40px rgba(0,0,0,.35); --shadow-lg:0 24px 70px rgba(0,0,0,.45);
+}
+[data-theme="light"]{
+  --bg:var(--paper); --bg-2:var(--paper-2); --bg-3:#EFEBE2; --bg-4:#E5E0D5;
+  --text:var(--text-l); --text-dim:var(--text-l-dim); --line:var(--line-l); --line-strong:var(--line-l-strong);
+  --shadow-md:0 12px 40px rgba(11,14,20,.08); --shadow-lg:0 24px 70px rgba(11,14,20,.12);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+ion-icon{display:inline-block;width:1em;height:1em}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:var(--body);line-height:1.7;overflow-x:hidden;transition:background .4s ease,color .4s ease}
+[dir="rtl"] body{font-family:var(--body-ar)}
+::selection{background:var(--gold);color:var(--ink)}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+img{max-width:100%;display:block}
+button{cursor:pointer;border:none;background:none;font-family:inherit}
+
+.grain{position:fixed;inset:0;z-index:998;pointer-events:none;opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+.rail{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--verified-light));z-index:1001;width:0%;transition:width .1s linear}
+
+/* lang visibility */
+[data-en]{display:inline}
+[data-ar]{display:none}
+html[lang="ar"] [data-en]{display:none}
+html[lang="ar"] [data-ar]{display:inline}
+.block-i18n [data-en]{display:block}
+html[lang="ar"] .block-i18n [data-ar]{display:block}
+html[lang="ar"] .cover-h1 em,html[lang="ar"] em{font-style:normal}
+
+/* RTL structural flips */
+html[dir="rtl"] .timeline-line{right:auto;left:19px}
+html[dir="rtl"] .t-item{padding-right:0;padding-left:46px}
+html[dir="rtl"] .t-dot{right:auto;left:0}
+html[dir="rtl"] .s-tag{flex-direction:row-reverse}
+html[dir="rtl"] .nav-inner{flex-direction:row-reverse}
+html[dir="rtl"] .nav-links{flex-direction:row-reverse}
+html[dir="rtl"] .f-inner{flex-direction:row-reverse}
+html[dir="rtl"] .f-cols{flex-direction:row-reverse}
+html[dir="rtl"] .mn-nav{flex-direction:row-reverse}
+
+/* ============ NAV ============ */
+nav.topnav{position:fixed;top:0;left:0;right:0;z-index:500;padding:16px 0;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);transition:.3s}
+.nav-inner{max-width:1240px;margin:0 auto;padding:0 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.nav-logo{font-family:var(--disp);font-weight:700;font-size:1.1rem;letter-spacing:-.01em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:7px 13px;border-radius:100px;font-size:.83rem;font-weight:500;color:var(--text-dim);transition:.2s;white-space:nowrap}
+.nav-links a:hover{color:var(--text);background:var(--bg-3)}
+.nav-ctrl{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.ctrl-btn{width:36px;height:36px;border-radius:50%;border:1px solid var(--line-strong);display:flex;align-items:center;justify-content:center;color:var(--text-dim);transition:.25s;font-size:1rem}
+.ctrl-btn:hover{border-color:var(--gold);color:var(--gold);background:var(--bg-3)}
+.lang-btn{font-family:var(--mono);font-size:.68rem;font-weight:700}
+
+/* ============ HERO (FIXED responsive orbit) ============ */
+.hero{min-height:100svh;display:flex;align-items:center;position:relative;overflow:hidden;padding-top:76px}
+.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 900px 600px at 75% 20%, color-mix(in srgb, var(--gold) 8%, transparent), transparent 60%), radial-gradient(ellipse 700px 500px at 10% 90%, color-mix(in srgb, var(--verified) 10%, transparent), transparent 60%)}
+.hero-grid-bg{position:absolute;inset:0;opacity:.5;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 800px 600px at 70% 35%,black,transparent)}
+.hero-inner{max-width:1240px;margin:0 auto;padding:32px 32px 70px;position:relative;z-index:1;width:100%}
+.hero-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+
+.avail-pill{display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border:1px solid color-mix(in srgb, var(--verified) 40%, transparent);background:color-mix(in srgb, var(--verified) 8%, transparent);border-radius:100px;font-family:var(--mono);font-size:.7rem;font-weight:600;color:var(--verified-light);margin-bottom:22px;
+  opacity:0;animation:fadeUp .8s ease forwards}
+.avail-dot{width:6px;height:6px;border-radius:50%;background:var(--verified-light);animation:blink 1.8s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+.hero-h1{font-family:var(--disp);font-weight:700;font-size:clamp(1.9rem,4.2vw,3.4rem);line-height:1.18;letter-spacing:-.02em;margin-bottom:16px;
+  opacity:0;animation:fadeUp .9s ease .1s forwards}
+.hero-h1 em{font-style:normal;color:var(--gold)}
+.hero-role{display:block;font-size:.4em;font-weight:500;color:var(--text-dim);margin-top:12px}
+.hero-name{font-family:var(--disp);font-weight:700;font-size:clamp(1.1rem,2.2vw,1.5rem);color:var(--text);margin-bottom:10px;letter-spacing:.01em;
+  opacity:0;animation:fadeUp .85s ease .05s forwards}
+.ar-fallback{display:block;font-family:var(--body);font-size:.62em;font-weight:400;color:var(--text-dim);opacity:.65;margin-top:6px;letter-spacing:0}
+
+.hero-p{font-size:.96rem;color:var(--text-dim);max-width:520px;line-height:1.85;margin-bottom:28px;
+  opacity:0;animation:fadeUp .9s ease .25s forwards}
+
+.hero-cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;
+  opacity:0;animation:fadeUp .9s ease .4s forwards}
+.btn-gold{display:inline-flex;align-items:center;gap:8px;padding:13px 24px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--ink);border-radius:var(--r-sm);font-weight:700;font-size:.88rem;transition:.25s;box-shadow:0 6px 24px color-mix(in srgb, var(--gold) 35%, transparent)}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 10px 32px color-mix(in srgb, var(--gold) 45%, transparent)}
+.btn-outline{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border:1.5px solid var(--line-strong);color:var(--text);border-radius:var(--r-sm);font-weight:600;font-size:.86rem;transition:.25s}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+
+.hero-meta-row{display:flex;flex-wrap:wrap;gap:28px;padding-top:24px;border-top:1px solid var(--line);
+  opacity:0;animation:fadeUp .9s ease .55s forwards}
+.hmeta-num{font-family:var(--disp);font-weight:700;font-size:1.5rem;color:var(--gold)}
+.hmeta-label{font-family:var(--mono);font-size:.66rem;color:var(--text-dim);margin-top:3px;letter-spacing:.03em}
+
+/* Hero visual — fully fluid orbit, no fixed reserved height beyond its own content */
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;perspective:1200px;
+  opacity:0;animation:fadeUp 1.1s ease .5s forwards;
+  width:100%; aspect-ratio:1/1; max-width:380px; margin:0 auto}
+.orbit-system{position:relative;width:100%;height:100%;transform-style:preserve-3d;animation:systemFloat 8s ease-in-out infinite}
+@keyframes systemFloat{0%,100%{transform:rotateX(8deg) rotateY(-4deg)}50%{transform:rotateX(2deg) rotateY(4deg)}}
+.core-node{position:absolute;top:50%;left:50%;width:36%;height:36%;margin-left:-18%;margin-top:-18%;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%, color-mix(in srgb, var(--verified) 35%, var(--bg-2)), var(--bg-2) 70%);
+  border:2px solid var(--verified);display:flex;flex-direction:column;align-items:center;justify-content:center;
+  box-shadow:0 0 0 1px color-mix(in srgb, var(--verified) 25%, transparent), 0 20px 60px rgba(0,0,0,.4), inset 0 0 30px color-mix(in srgb, var(--verified) 15%, transparent);
+  z-index:5;transform:translateZ(30px)}
+.core-num{font-family:var(--disp);font-weight:700;font-size:clamp(1.4rem,5vw,2.1rem);color:var(--gold-light);line-height:1}
+.core-label{font-family:var(--mono);font-size:clamp(.5rem,1.6vw,.6rem);color:var(--text-dim);margin-top:4px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:0 8px}
+
+.ring{position:absolute;top:50%;left:50%;border-radius:50%;border:1px dashed var(--line-strong);transform-style:preserve-3d}
+.ring-1{width:68%;height:68%;margin-left:-34%;margin-top:-34%;transform:rotateX(70deg) rotateZ(0deg);animation:spin 30s linear infinite}
+.ring-2{width:95%;height:95%;margin-left:-47.5%;margin-top:-47.5%;transform:rotateX(70deg) rotateZ(45deg);animation:spin 42s linear infinite reverse}
+@keyframes spin{to{transform:rotateX(70deg) rotateZ(360deg)}}
+
+.orbit-badge{position:absolute;width:14%;height:14%;min-width:38px;min-height:38px;border-radius:28%;background:var(--bg-2);border:1px solid var(--line-strong);
+  display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-md);font-size:clamp(1rem,3.5vw,1.4rem);
+  animation:badgeFloat 5s ease-in-out infinite}
+@keyframes badgeFloat{0%,100%{transform:translateY(0) translateZ(40px)}50%{transform:translateY(-8px) translateZ(40px)}}
+.ob-1{top:4%;left:50%;margin-left:-7%;animation-delay:0s}
+.ob-2{top:33%;right:0%;animation-delay:.6s}
+.ob-3{bottom:6%;right:12%;animation-delay:1.2s}
+.ob-4{bottom:6%;left:12%;animation-delay:1.8s}
+.ob-5{top:33%;left:0%;animation-delay:2.4s}
+
+/* ============ SECTION SCAFFOLDING ============ */
+section{padding:90px 0;position:relative}
+.s-inner{max-width:1240px;margin:0 auto;padding:0 32px}
+.s-tag{display:flex;align-items:center;gap:14px;margin-bottom:16px}
+.s-tag-num{font-family:var(--mono);font-size:.74rem;color:var(--gold);border:1px solid color-mix(in srgb, var(--gold) 30%, transparent);padding:4px 10px;border-radius:3px;background:color-mix(in srgb, var(--gold) 6%, transparent)}
+.s-tag-label{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--text-dim);text-transform:uppercase}
+.s-h{font-family:var(--disp);font-weight:700;font-size:clamp(1.55rem,3vw,2.4rem);max-width:760px;line-height:1.3;margin-bottom:14px;letter-spacing:-.01em}
+.s-h em{font-style:normal;color:var(--gold)}
+.s-p{font-size:.94rem;color:var(--text-dim);max-width:600px;line-height:1.85}
+.s-head{margin-bottom:48px}
+.bg-alt{background:var(--bg-2)}
+
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ============ IMPACT STRIP ============ */
+.impact-strip{padding:0;margin-top:-44px;position:relative;z-index:3}
+.impact-card{max-width:1240px;margin:0 32px;background:var(--bg-2);border:1px solid var(--line-strong);border-radius:var(--r-xl);
+  box-shadow:var(--shadow-lg);padding:32px 26px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(min-width:1304px){.impact-card{margin:0 auto}}
+.impact-item{text-align:center;padding:0 6px;position:relative}
+.impact-item:not(:last-child)::after{content:'';position:absolute;top:10%;bottom:10%;right:-10px;width:1px;background:var(--line)}
+.impact-num{font-family:var(--disp);font-weight:700;font-size:1.75rem;color:var(--gold);line-height:1}
+.impact-label{font-size:.76rem;color:var(--text-dim);margin-top:7px;line-height:1.5}
+
+/* ============ EXECUTIVE SUMMARY ============ */
+.exec-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.exec-points{display:flex;flex-direction:column;gap:0}
+.exec-point{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line)}
+.exec-point:first-child{padding-top:0}
+.exec-point:last-child{border-bottom:none}
+.exec-icon{width:38px;height:38px;border-radius:var(--r-sm);background:color-mix(in srgb, var(--verified) 10%,transparent);border:1px solid color-mix(in srgb, var(--verified) 25%,transparent);display:flex;align-items:center;justify-content:center;color:var(--verified-light);flex-shrink:0}
+.exec-icon ion-icon{font-size:1.1rem}
+.exec-point-title{font-weight:700;font-size:.95rem;margin-bottom:5px;font-family:var(--disp)}
+.exec-point-desc{font-size:.86rem;color:var(--text-dim);line-height:1.7}
+
+.exec-industries{display:flex;flex-direction:column;gap:14px}
+.industry-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-md);padding:18px 20px;display:flex;align-items:center;gap:14px;transition:.25s}
+.industry-card:hover{border-color:color-mix(in srgb, var(--gold) 25%,transparent)}
+.industry-flag{font-size:1.3rem;flex-shrink:0}
+.industry-name{font-weight:700;font-size:.88rem}
+.industry-detail{font-size:.78rem;color:var(--text-dim);margin-top:2px}
+
+/* ============ CORE EXPERTISE ============ */
+.expertise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.expertise-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:28px;transition:.3s}
+.expertise-card:hover{border-color:color-mix(in srgb, var(--gold) 25%,transparent);transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.exp-icon-box{width:46px;height:46px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;margin-bottom:18px;color:#fff}
+.exp-icon-box ion-icon{font-size:1.3rem}
+.expertise-title{font-family:var(--disp);font-weight:700;font-size:1.02rem;margin-bottom:10px}
+.expertise-desc{font-size:.85rem;color:var(--text-dim);line-height:1.7;margin-bottom:14px}
+.expertise-outcome{display:flex;align-items:center;gap:8px;font-size:.78rem;color:var(--verified-light);padding:9px 12px;background:color-mix(in srgb, var(--verified) 6%,transparent);border-radius:var(--r-sm);border:1px solid color-mix(in srgb, var(--verified) 15%,transparent)}
+
+/* ============ DEPTH SECTION ============ */
+.depth-section{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.depth-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.depth-visual{position:relative;perspective:1200px}
+.depth-card{background:var(--bg);border:1px solid var(--line-strong);border-radius:var(--r-xl);padding:30px;
+  transform-style:preserve-3d;transition:transform .15s ease-out;box-shadow:var(--shadow-lg)}
+.depth-card-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.depth-icon{width:44px;height:44px;border-radius:50%;background:color-mix(in srgb, var(--verified) 12%,transparent);border:1px solid color-mix(in srgb, var(--verified) 35%,transparent);display:flex;align-items:center;justify-content:center;color:var(--verified-light);flex-shrink:0}
+.depth-icon ion-icon{font-size:1.25rem}
+.depth-card-title{font-family:var(--disp);font-weight:700;font-size:1rem}
+.depth-card-sub{font-family:var(--mono);font-size:.7rem;color:var(--text-dim);margin-top:2px}
+.depth-row{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:.8rem}
+.depth-row:last-child{border-bottom:none}
+.depth-row-label{color:var(--text-dim)}
+.depth-row-val{color:var(--gold-light);font-weight:700}
+
+.depth-points{display:flex;flex-direction:column;gap:0}
+.depth-point{display:flex;gap:16px;padding:20px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.depth-point:first-child{padding-top:0}
+.depth-point-num{flex-shrink:0;width:36px;height:36px;border-radius:var(--r-sm);background:color-mix(in srgb, var(--gold) 10%,transparent);border:1px solid color-mix(in srgb, var(--gold) 25%,transparent);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:.76rem;color:var(--gold)}
+.depth-point-title{font-weight:700;font-size:.94rem;margin-bottom:4px;font-family:var(--disp)}
+.depth-point-desc{font-size:.85rem;color:var(--text-dim);line-height:1.7}
+
+/* ============ TIMELINE ============ */
+.timeline-wrap{position:relative;max-width:840px}
+.timeline-line{position:absolute;top:6px;bottom:6px;left:19px;width:2px;background:linear-gradient(180deg,var(--gold),var(--verified),transparent)}
+.t-item{position:relative;padding-bottom:42px;padding-left:46px}
+.t-item:last-child{padding-bottom:0}
+.t-dot{position:absolute;left:0;top:4px;width:20px;height:20px;border-radius:50%;background:var(--bg);border:2px solid var(--gold);display:flex;align-items:center;justify-content:center;z-index:2}
+.t-dot::after{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.t-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 26px;transition:all .3s ease;cursor:pointer}
+.t-card:hover{border-color:color-mix(in srgb, var(--gold) 35%,transparent);box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.t-period{font-family:var(--mono);font-size:.7rem;color:var(--gold);letter-spacing:.06em;text-transform:uppercase;margin-bottom:9px}
+.t-title{font-family:var(--disp);font-weight:700;font-size:1.05rem;margin-bottom:3px}
+.t-company{font-size:.82rem;color:var(--text-dim);margin-bottom:13px}
+.t-challenge-row{display:flex;gap:10px;margin-bottom:12px;flex-wrap:wrap}
+.t-chal-badge{font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 10px;border-radius:100px;background:color-mix(in srgb, var(--gold) 8%,transparent);color:var(--gold-dim);border:1px solid color-mix(in srgb, var(--gold) 20%,transparent)}
+.t-desc{font-size:.86rem;color:var(--text-dim);line-height:1.7;margin-bottom:13px}
+.t-tags{display:flex;flex-wrap:wrap;gap:6px}
+.t-tag{padding:4px 10px;border-radius:100px;font-size:.7rem;font-weight:500;background:var(--bg-3);border:1px solid var(--line);color:var(--text-dim)}
+.t-expand{display:inline-flex;align-items:center;gap:6px;font-size:.76rem;font-weight:600;color:var(--gold);margin-top:14px}
+.t-expand ion-icon{font-size:.85rem;transition:transform .25s}
+.t-card.open .t-expand ion-icon{transform:rotate(180deg)}
+.t-detail{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.t-card.open .t-detail{max-height:700px;margin-top:14px}
+.t-detail-list{display:flex;flex-direction:column;gap:8px;padding-top:13px;border-top:1px solid var(--line)}
+.t-detail-list li{display:flex;gap:9px;align-items:flex-start;font-size:.83rem;color:var(--text-dim);line-height:1.65}
+.t-detail-list ion-icon{color:var(--verified-light);flex-shrink:0;margin-top:3px;font-size:.92rem}
+.t-result-banner{display:flex;align-items:center;gap:8px;margin-top:14px;padding:11px 14px;background:color-mix(in srgb, var(--verified) 7%,transparent);border:1px solid color-mix(in srgb, var(--verified) 18%,transparent);border-radius:var(--r-sm);font-size:.8rem;color:var(--verified-light);font-weight:600}
+
+/* ============ PROJECTS ============ */
+.filters{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:42px}
+.filter-btn{padding:9px 19px;border-radius:100px;border:1px solid var(--line-strong);font-weight:600;font-size:.82rem;color:var(--text-dim);transition:.25s;background:var(--bg-2)}
+.filter-btn.active,.filter-btn:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+.project-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:22px}
+.project-card{cursor:pointer;background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;transition:all .35s cubic-bezier(.16,1,.3,1)}
+.project-card:hover{transform:translateY(-7px);border-color:color-mix(in srgb, var(--gold) 30%,transparent);box-shadow:var(--shadow-lg)}
+.proj-top{padding:22px 22px 0}
+.proj-cat-row{display:flex;justify-content:space-between;align-items:center;margin-bottom:13px}
+.proj-cat{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+.proj-live-badge{display:flex;align-items:center;gap:5px;font-size:.66rem;color:var(--verified-light);font-family:var(--mono)}
+.proj-live-dot{width:5px;height:5px;border-radius:50%;background:var(--verified-light)}
+.proj-icon-box{width:44px;height:44px;border-radius:var(--r-md);background:color-mix(in srgb, var(--verified) 10%,transparent);border:1px solid color-mix(in srgb, var(--verified) 25%,transparent);display:flex;align-items:center;justify-content:center;color:var(--verified-light);margin-bottom:16px}
+.proj-icon-box ion-icon{font-size:1.3rem}
+.proj-title{font-family:var(--disp);font-weight:700;font-size:1.02rem;margin-bottom:9px}
+.proj-desc{font-size:.83rem;color:var(--text-dim);line-height:1.7;margin-bottom:16px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.proj-bottom{padding:0 22px 22px;display:flex;flex-direction:column;gap:13px}
+.proj-impact{display:flex;align-items:center;gap:8px;font-family:var(--mono);font-size:.73rem;color:var(--verified-light);padding:9px 13px;background:color-mix(in srgb, var(--verified) 6%,transparent);border-radius:var(--r-sm);border:1px solid color-mix(in srgb, var(--verified) 15%,transparent)}
+.proj-tags{display:flex;flex-wrap:wrap;gap:6px}
+.proj-tags .tag{font-size:.66rem;padding:4px 9px;background:var(--bg-3);border-radius:4px;border:1px solid var(--line);color:var(--text-dim)}
+
+/* ============ TECH STACK ============ */
+.stack-grid{display:grid;gap:18px}
+.stack-cat{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;transition:.3s}
+.stack-cat:hover{border-color:color-mix(in srgb, var(--gold) 25%,transparent)}
+.stack-cat-head{display:flex;align-items:center;gap:13px;margin-bottom:20px}
+.stack-cat-icon{width:40px;height:40px;border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:#fff}
+.stack-cat-icon ion-icon{font-size:1.15rem}
+.stack-cat-title{font-family:var(--disp);font-weight:700;font-size:1rem}
+.stack-items{display:grid;grid-template-columns:repeat(auto-fit,minmax(118px,1fr));gap:12px}
+.stack-item{display:flex;flex-direction:column;align-items:center;gap:7px;padding:14px 8px;border-radius:var(--r-md);background:var(--bg);border:1px solid var(--line);transition:.25s}
+.stack-item:hover{transform:translateY(-3px);border-color:var(--gold)}
+.stack-item ion-icon{font-size:1.6rem}
+.stack-item span{font-size:.74rem;font-weight:600;color:var(--text-dim);text-align:center}
+
+/* ============ LEADERSHIP ============ */
+.leadership-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.lead-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:26px;transition:.3s}
+.lead-card:hover{border-color:color-mix(in srgb, var(--gold) 25%,transparent)}
+.lead-icon{width:42px;height:42px;border-radius:50%;background:color-mix(in srgb, var(--gold) 10%,transparent);border:1px solid color-mix(in srgb, var(--gold) 25%,transparent);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:16px}
+.lead-icon ion-icon{font-size:1.2rem}
+.lead-title{font-family:var(--disp);font-weight:700;font-size:.96rem;margin-bottom:9px}
+.lead-desc{font-size:.84rem;color:var(--text-dim);line-height:1.7}
+
+/* ============ GITHUB ============ */
+.gh-card{background:var(--bg-2);border:1px solid var(--line-strong);border-radius:var(--r-xl);padding:32px;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.gh-stat{text-align:center;flex:1;min-width:100px}
+.gh-stat-num{font-family:var(--disp);font-weight:700;font-size:1.8rem;color:var(--gold)}
+.gh-stat-label{font-size:.78rem;color:var(--text-dim);margin-top:4px}
+.gh-divider{width:1px;height:50px;background:var(--line)}
+.gh-cta{display:flex;align-items:center;gap:10px;flex-shrink:0}
+
+/* ============ CERTIFICATIONS ============ */
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.cert-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px;display:flex;gap:14px;align-items:flex-start;transition:.3s}
+.cert-card:hover{border-color:color-mix(in srgb, var(--gold) 30%,transparent);transform:translateY(-2px)}
+.cert-badge{width:40px;height:40px;border-radius:50%;background:color-mix(in srgb, var(--gold) 10%,transparent);border:1px solid color-mix(in srgb, var(--gold) 30%,transparent);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0}
+.cert-badge ion-icon{font-size:1.2rem}
+.cert-name{font-weight:700;font-size:.88rem;margin-bottom:3px}
+.cert-issuer{font-size:.76rem;color:var(--text-dim)}
+
+/* ============ CONTACT ============ */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.contact-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-xl);padding:32px}
+.form-group{margin-bottom:16px}
+.form-label{display:block;font-size:.8rem;font-weight:600;color:var(--text-dim);margin-bottom:7px}
+.form-input{width:100%;padding:12px 15px;border-radius:var(--r-sm);border:1px solid var(--line-strong);background:var(--bg);color:var(--text);font-family:inherit;font-size:.88rem;transition:.2s}
+.form-input:focus{border-color:var(--gold);box-shadow:0 0 0 3px color-mix(in srgb, var(--gold) 12%,transparent)}
+.btn-submit{width:100%;padding:13px;background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--ink);border-radius:var(--r-sm);font-weight:700;font-size:.92rem;transition:.25s;display:flex;align-items:center;justify-content:center;gap:8px}
+.btn-submit:hover{transform:translateY(-2px);box-shadow:0 8px 24px color-mix(in srgb, var(--gold) 35%,transparent)}
+
+.contact-info-list{display:flex;flex-direction:column;gap:14px}
+.cinfo-card{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--r-lg);padding:20px;display:flex;align-items:center;gap:16px;transition:.25s}
+.cinfo-card:hover{border-color:color-mix(in srgb, var(--gold) 25%,transparent)}
+.cinfo-icon{width:42px;height:42px;border-radius:var(--r-sm);background:color-mix(in srgb, var(--verified) 10%,transparent);border:1px solid color-mix(in srgb, var(--verified) 25%,transparent);display:flex;align-items:center;justify-content:center;color:var(--verified-light);flex-shrink:0}
+.cinfo-icon ion-icon{font-size:1.2rem}
+.cinfo-label{font-size:.74rem;color:var(--text-dim)}
+.cinfo-val{font-weight:700;font-size:.9rem;margin-top:2px;font-family:var(--mono)}
+
+/* ============ FOOTER ============ */
+footer{background:var(--ink);color:rgba(244,240,230,.6);padding:48px 0 110px;border-top:1px solid var(--line-d)}
+.f-inner{max-width:1240px;margin:0 auto;padding:0 32px}
+.f-cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:36px}
+.f-logo{font-family:var(--disp);font-weight:700;font-size:1.1rem;color:#fff;margin-bottom:13px}
+.f-logo span{color:var(--gold-light)}
+.f-desc{font-size:.83rem;line-height:1.8;color:rgba(244,240,230,.45);max-width:320px}
+.f-col-title{font-family:var(--disp);font-weight:700;font-size:.85rem;color:#fff;margin-bottom:14px}
+.f-links{display:flex;flex-direction:column;gap:9px}
+.f-links a{font-size:.82rem;color:rgba(244,240,230,.5);transition:.2s}
+.f-links a:hover{color:var(--gold-light)}
+.f-social{display:flex;gap:10px}
+.f-social a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(244,240,230,.15);display:flex;align-items:center;justify-content:center;color:rgba(244,240,230,.6);transition:.25s}
+.f-social a:hover{border-color:var(--gold);color:var(--gold-light);background:rgba(201,162,74,.08)}
+.f-bottom{border-top:1px solid rgba(244,240,230,.1);padding-top:22px;text-align:center;font-size:.76rem;color:rgba(244,240,230,.3)}
+
+/* ============ MOBILE NAV / WHATSAPP ============ */
+.mn-nav{display:none;position:fixed;bottom:0;left:0;right:0;height:64px;background:var(--bg-2);border-top:1px solid var(--line);z-index:900;justify-content:space-around;align-items:center;padding-bottom:env(safe-area-inset-bottom)}
+.mn-item{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:.64rem;color:var(--text-dim)}
+.mn-item ion-icon{font-size:1.2rem}
+.wa-float{position:fixed;bottom:78px;z-index:899;width:52px;height:52px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(37,211,102,.4);transition:.25s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float ion-icon{font-size:1.5rem;color:#fff}
+html[dir="ltr"] .wa-float{right:20px}
+html[dir="rtl"] .wa-float{left:20px}
+
+/* ============ MODAL ============ */
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.75);backdrop-filter:blur(8px);z-index:2000;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.active{display:flex;animation:modalIn .3s ease}
+@keyframes modalIn{from{opacity:0}to{opacity:1}}
+.modal-box{background:var(--bg-2);border:1px solid var(--line-strong);border-radius:var(--r-xl);max-width:600px;width:100%;max-height:86vh;overflow-y:auto;position:relative;box-shadow:var(--shadow-lg)}
+.modal-close{position:absolute;top:16px;right:16px;width:34px;height:34px;border-radius:50%;background:var(--bg-3);display:flex;align-items:center;justify-content:center;color:var(--text);z-index:10}
+html[dir="rtl"] .modal-close{right:auto;left:16px}
+.modal-content-inner{padding:32px}
+.modal-cat{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:11px}
+.modal-title{font-family:var(--disp);font-weight:700;font-size:1.25rem;margin-bottom:14px}
+.modal-desc{font-size:.88rem;color:var(--text-dim);line-height:1.85;margin-bottom:20px}
+.modal-impact{display:flex;align-items:center;gap:10px;padding:13px 16px;background:color-mix(in srgb, var(--verified) 8%,transparent);border:1px solid color-mix(in srgb, var(--verified) 20%,transparent);border-radius:var(--r-md);font-size:.83rem;color:var(--verified-light);margin-bottom:18px}
+.modal-tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:22px}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap}
+
+/* ============ RESPONSIVE ============ */
+@media(max-width:1024px){
+  .hero-grid{grid-template-columns:1fr}
+  .hero-visual{order:-1;margin-bottom:8px;max-width:260px}
+  .exec-grid,.depth-grid,.contact-grid{grid-template-columns:1fr}
+  .expertise-grid{grid-template-columns:repeat(2,1fr)}
+  .impact-card{grid-template-columns:repeat(2,1fr)}
+  .leadership-grid{grid-template-columns:1fr}
+  .f-cols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none}
+  section{padding:56px 0}
+  .s-inner,.hero-inner{padding-left:18px;padding-right:18px}
+  .nav-inner{padding:0 18px}
+  .mn-nav{display:flex}
+  body{padding-bottom:64px}
+  .impact-card{grid-template-columns:1fr 1fr;padding:24px 16px;margin:0 18px}
+  .impact-item:nth-child(2)::after{display:none}
+  .expertise-grid{grid-template-columns:1fr}
+  .f-cols{grid-template-columns:1fr}
+  .f-inner{padding:0 18px}
+  .gh-card{padding:24px 20px;gap:18px}
+  .gh-divider{display:none}
+  .hero-visual{max-width:220px}
+  .hero-meta-row{gap:18px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="rail" id="rail" aria-hidden="true"></div>
+
+<nav class="topnav" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Mohamed <span>Salah</span></a>
+    <div class="nav-links">
+      <a href="#expertise" data-en>Expertise</a><a href="#expertise" data-ar>الخبرة</a>
+      <a href="#experience" data-en>Experience</a><a href="#experience" data-ar>المسيرة</a>
+      <a href="#portfolio" data-en>Projects</a><a href="#portfolio" data-ar>المشاريع</a>
+      <a href="#github" data-en>GitHub</a><a href="#github" data-ar>GitHub</a>
+      <a href="#contact" data-en>Contact</a><a href="#contact" data-ar>تواصل</a>
+    </div>
+    <div class="nav-ctrl">
+      <button class="ctrl-btn" id="themeToggle" aria-label="Toggle theme">
+        <ion-icon name="moon-outline" id="themeIcon"></ion-icon>
+      </button>
+      <button class="ctrl-btn lang-btn" id="langToggle" aria-label="Toggle language">
+        <span id="langLabel">AR</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-grid-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-grid">
+      <div>
+        <div class="avail-pill">
+          <div class="avail-dot" aria-hidden="true"></div>
+          <span data-en>Open to Work · Hybrid / Remote</span>
+          <span data-ar>متاح للعمل · هجين / عن بُعد <span class="ar-fallback">(Open to Work · Hybrid / Remote)</span></span>
+        </div>
+
+        <div class="hero-name block-i18n">
+          <span data-en>𝗠𝗢𝗛𝗔𝗠𝗘𝗗 𝗦𝗔𝗟𝗔𝗛 👔</span>
+          <span data-ar>𝗠𝗢𝗛𝗔𝗠𝗘𝗗 𝗦𝗔𝗟𝗔𝗛 👔</span>
+        </div>
+
+        <h1 class="hero-h1 block-i18n">
+          <span data-en>Senior Full Stack &amp; <em>ERP</em> Developer<span class="hero-role">with 6 years of hands-on experience helping businesses digitize, automate, and scale through ERP systems and AI-driven workflows</span></span>
+          <span data-ar>مطوّر برمجيات متكامل، ومطوّر أنظمة <em>ERP</em> بخبرة أكثر من 6 سنوات<span class="hero-role">مساعدة الشركات على الرقمنة والأتمتة والتوسع عبر أنظمة ERP وسير عمل مدعوم بالذكاء الاصطناعي<br><span class="ar-fallback">Senior Full Stack &amp; ERP Developer with 6 years of hands-on experience</span></span></span>
+        </h1>
+
+        <p class="hero-p block-i18n">
+          <span data-en>6 years delivering ERP implementations, ZATCA e-invoicing compliance, and AI-driven automation across Egypt and the GCC — with measurable business outcomes, not just delivered tickets.</span>
+          <span data-ar>6 سنوات خبرة في تنفيذ أنظمة ERP، والامتثال لفوترة ZATCA الإلكترونية، والأتمتة بالذكاء الاصطناعي عبر مصر ودول الخليج — بنتائج أعمال مُقاسة، وليست مجرد مهام منجزة.<br><span class="ar-fallback">6 years delivering ERP implementations, ZATCA compliance, and AI automation across Egypt and the GCC.</span></span>
+        </p>
+
+        <div class="hero-cta-row">
+          <a href="#portfolio" class="btn-gold">
+            <span data-en>View Case Studies</span><span data-ar>تصفح دراسات الحالة</span>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </a>
+          <a href="https://moh222salah.github.io/cv" target="_blank" class="btn-outline">
+            <span data-en>Download CV</span><span data-ar>تحميل السيرة الذاتية</span>
+            <ion-icon name="download-outline"></ion-icon>
+          </a>
+        </div>
+
+        <div class="hero-meta-row">
+          <div><div class="hmeta-num">6</div><div class="hmeta-label block-i18n"><span data-en>Years Experience</span><span data-ar>سنوات خبرة</span></div></div>
+          <div><div class="hmeta-num">4</div><div class="hmeta-label block-i18n"><span data-en>ERPNext Go-Lives</span><span data-ar>تنفيذات ERPNext كاملة</span></div></div>
+          <div><div class="hmeta-num">20</div><div class="hmeta-label block-i18n"><span data-en>Apps Delivered</span><span data-ar>تطبيق منجز</span></div></div>
+          <div><div class="hmeta-num">88%</div><div class="hmeta-label block-i18n"><span data-en>Close-Time Reduction</span><span data-ar>تقليل وقت الإغلاق</span></div></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="orbit-system" aria-hidden="true">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="core-node">
+            <div class="core-num">6</div>
+            <div class="core-label block-i18n"><span data-en>Years ERP &amp; Full Stack</span><span data-ar>سنوات ERP وFull Stack</span></div>
+          </div>
+          <div class="orbit-badge ob-1" title="ERPNext"><ion-icon name="layers-outline" style="color:#00D4FF"></ion-icon></div>
+          <div class="orbit-badge ob-2" title="React"><ion-icon name="logo-react" style="color:#61DAFB"></ion-icon></div>
+          <div class="orbit-badge ob-3" title="ZATCA"><ion-icon name="shield-checkmark-outline" style="color:#2E9A7F"></ion-icon></div>
+          <div class="orbit-badge ob-4" title="n8n / AI"><ion-icon name="git-network-outline" style="color:#C9A24A"></ion-icon></div>
+          <div class="orbit-badge ob-5" title="Laravel"><ion-icon name="code-slash-outline" style="color:#FF2D20"></ion-icon></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ IMPACT STRIP ============ -->
+<div class="impact-strip">
+  <div class="impact-card reveal">
+    <div class="impact-item">
+      <div class="impact-num">SAR 40K+</div>
+      <div class="impact-label block-i18n"><span data-en>Annual savings via a custom GL reporting engine</span><span data-ar>توفير سنوي عبر محرك تقارير دفتر أستاذ مخصص</span></div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">2 <span style="font-size:.5em">Phases</span></div>
+      <div class="impact-label block-i18n"><span data-en>ZATCA e-invoicing phases implemented end-to-end</span><span data-ar>مرحلتا فوترة ZATCA منفذتان بالكامل</span></div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">91%</div>
+      <div class="impact-label block-i18n"><span data-en>Accuracy on a 300 doc/day AI pipeline</span><span data-ar>دقة على معالجة 300 مستند يومياً بالذكاء الاصطناعي</span></div>
+    </div>
+    <div class="impact-item">
+      <div class="impact-num">69</div>
+      <div class="impact-label block-i18n"><span data-en>Public repositories with live deployed demos</span><span data-ar>مستودع عام مع عروض تجريبية منشورة فعلياً</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ EXECUTIVE SUMMARY ============ -->
+<section id="about">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">01</span><span class="s-tag-label"><span data-en>Executive Summary</span><span data-ar>الملخص التنفيذي</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>I solve <em>business problems</em>, not just write code.</span><span data-ar>أحل <em>مشكلات الأعمال</em>، ولا أكتفي بكتابة الكود.</span></h2>
+    </div>
+
+    <div class="exec-grid">
+      <div class="exec-points reveal">
+        <div class="exec-point">
+          <div class="exec-icon"><ion-icon name="construct-outline"></ion-icon></div>
+          <div>
+            <div class="exec-point-title block-i18n"><span data-en>What I Build</span><span data-ar>ما أبنيه</span></div>
+            <div class="exec-point-desc block-i18n"><span data-en>Enterprise ERP systems, compliant e-invoicing infrastructure, and AI-driven automation pipelines that replace manual processes with measurable efficiency.</span><span data-ar>أنظمة ERP مؤسسية، وبنية تحتية للفوترة الإلكترونية المتوافقة، وخطوط أتمتة بالذكاء الاصطناعي تستبدل العمليات اليدوية بكفاءة قابلة للقياس.</span></div>
+          </div>
+        </div>
+        <div class="exec-point">
+          <div class="exec-icon"><ion-icon name="trending-up-outline"></ion-icon></div>
+          <div>
+            <div class="exec-point-title block-i18n"><span data-en>The Value I Create</span><span data-ar>القيمة التي أصنعها</span></div>
+            <div class="exec-point-desc block-i18n"><span data-en>Reduced close times, regulatory compliance ahead of deadlines, and operational cost savings — translated into numbers executives actually track.</span><span data-ar>تقليل أوقات الإغلاق، امتثال تنظيمي قبل المواعيد النهائية، وتوفير في التكاليف التشغيلية — مترجمة إلى أرقام يتابعها صناع القرار فعلياً.</span></div>
+          </div>
+        </div>
+        <div class="exec-point">
+          <div class="exec-icon"><ion-icon name="people-outline"></ion-icon></div>
+          <div>
+            <div class="exec-point-title block-i18n"><span data-en>How I Work</span><span data-ar>كيف أعمل</span></div>
+            <div class="exec-point-desc block-i18n"><span data-en>Direct stakeholder workshops, phased implementation roadmaps, and change management — not just technical delivery in isolation.</span><span data-ar>ورش عمل مباشرة مع أصحاب القرار، خرائط تنفيذ مرحلية، وإدارة للتغيير — وليس مجرد تسليم تقني منعزل.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="exec-industries reveal">
+        <div class="industry-card">
+          <div class="industry-flag">🇸🇦</div>
+          <div><div class="industry-name block-i18n"><span data-en>Saudi Arabia &amp; GCC</span><span data-ar>السعودية ودول الخليج</span></div><div class="industry-detail block-i18n"><span data-en>ERPNext implementations, ZATCA compliance for manufacturing, trading, healthcare</span><span data-ar>تنفيذات ERPNext وامتثال ZATCA للتصنيع والتجارة والرعاية الصحية</span></div></div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-flag">🇰🇼</div>
+          <div><div class="industry-name block-i18n"><span data-en>Legal &amp; Professional Services</span><span data-ar>القطاع القانوني والخدمات المهنية</span></div><div class="industry-detail block-i18n"><span data-en>Case management platforms with AI-powered document automation</span><span data-ar>منصات إدارة قضايا بأتمتة مستندات بالذكاء الاصطناعي</span></div></div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-flag">🇸🇪</div>
+          <div><div class="industry-name block-i18n"><span data-en>European Business Platforms</span><span data-ar>منصات أعمال أوروبية</span></div><div class="industry-detail block-i18n"><span data-en>Client portals integrated with ERPNext and cross-platform automation</span><span data-ar>بوابات عملاء مدمجة مع ERPNext وأتمتة عبر منصات متعددة</span></div></div>
+        </div>
+        <div class="industry-card">
+          <div class="industry-flag">🇪🇬</div>
+          <div><div class="industry-name block-i18n"><span data-en>Fintech &amp; E-commerce</span><span data-ar>التقنية المالية والتجارة الإلكترونية</span></div><div class="industry-detail block-i18n"><span data-en>Custom full-stack platforms for real estate, healthcare, and retail clients</span><span data-ar>منصات Full Stack مخصصة لعملاء العقارات والرعاية الصحية والتجزئة</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORE EXPERTISE ============ -->
+<section class="bg-alt" id="expertise">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">02</span><span class="s-tag-label"><span data-en>Core Expertise</span><span data-ar>مجالات الخبرة الأساسية</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>Five disciplines, <em>one consultant.</em></span><span data-ar>خمسة تخصصات، <em>مستشار واحد.</em></span></h2>
+      <p class="s-p reveal block-i18n"><span data-en>Each area below maps directly to a business outcome, not just a technology label.</span><span data-ar>كل مجال أدناه يرتبط مباشرة بنتيجة عمل حقيقية، وليس مجرد تسمية تقنية.</span></p>
+    </div>
+
+    <div class="expertise-grid">
+      <div class="expertise-card reveal">
+        <div class="exp-icon-box" style="background:linear-gradient(135deg,#0089FF,#00D4FF)"><ion-icon name="layers-outline"></ion-icon></div>
+        <div class="expertise-title block-i18n"><span data-en>ERPNext &amp; Frappe Consulting</span><span data-ar>استشارات ERPNext وFrappe</span></div>
+        <div class="expertise-desc block-i18n"><span data-en>End-to-end implementation from requirements workshops through go-live and post-launch support.</span><span data-ar>تنفيذ شامل من ورش المتطلبات حتى التشغيل الفعلي ودعم ما بعد الإطلاق.</span></div>
+        <div class="expertise-outcome block-i18n"><ion-icon name="checkmark-circle-outline"></ion-icon><span data-en>4 full go-lives delivered</span><span data-ar>4 تنفيذات كاملة منجزة</span></div>
+      </div>
+
+      <div class="expertise-card reveal">
+        <div class="exp-icon-box" style="background:linear-gradient(135deg,#667eea,#764ba2)"><ion-icon name="code-slash-outline"></ion-icon></div>
+        <div class="expertise-title block-i18n"><span data-en>Full Stack Engineering</span><span data-ar>هندسة Full Stack</span></div>
+        <div class="expertise-desc block-i18n"><span data-en>Production-grade web applications with secure API architecture and RTL-ready interfaces.</span><span data-ar>تطبيقات ويب جاهزة للإنتاج بمعمارية API آمنة وواجهات تدعم العربية RTL.</span></div>
+        <div class="expertise-outcome block-i18n"><ion-icon name="checkmark-circle-outline"></ion-icon><span data-en>20 applications shipped</span><span data-ar>20 تطبيق تم تسليمه</span></div>
+      </div>
+
+      <div class="expertise-card reveal">
+        <div class="exp-icon-box" style="background:linear-gradient(135deg,#2E9A7F,#1A6E5C)"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
+        <div class="expertise-title block-i18n"><span data-en>ZATCA &amp; Regulatory Compliance</span><span data-ar>ZATCA والامتثال التنظيمي</span></div>
+        <div class="expertise-desc block-i18n"><span data-en>UBL 2.1 XML, ECDSA cryptographic stamping, and FATOORA portal integration — done right.</span><span data-ar>UBL 2.1 XML، التوقيع التشفيري ECDSA، وتكامل بوابة FATOORA — منفذ بدقة كاملة.</span></div>
+        <div class="expertise-outcome block-i18n"><ion-icon name="checkmark-circle-outline"></ion-icon><span data-en>Compliant ahead of deadlines</span><span data-ar>امتثال قبل المواعيد النهائية</span></div>
+      </div>
+
+      <div class="expertise-card reveal">
+        <div class="exp-icon-box" style="background:linear-gradient(135deg,#f093fb,#f5576c)"><ion-icon name="sparkles-outline"></ion-icon></div>
+        <div class="expertise-title block-i18n"><span data-en>AI &amp; Process Automation</span><span data-ar>الأتمتة والذكاء الاصطناعي</span></div>
+        <div class="expertise-desc block-i18n"><span data-en>n8n workflows and OpenAI-powered document intelligence replacing manual data entry.</span><span data-ar>سير عمل n8n وذكاء مستندات مدعوم بـOpenAI يستبدل إدخال البيانات اليدوي.</span></div>
+        <div class="expertise-outcome block-i18n"><ion-icon name="checkmark-circle-outline"></ion-icon><span data-en>91% classification accuracy</span><span data-ar>دقة تصنيف 91%</span></div>
+      </div>
+
+      <div class="expertise-card reveal">
+        <div class="exp-icon-box" style="background:linear-gradient(135deg,#fa709a,#fee140)"><ion-icon name="git-merge-outline"></ion-icon></div>
+        <div class="expertise-title block-i18n"><span data-en>System Integration &amp; APIs</span><span data-ar>تكامل الأنظمة وAPIs</span></div>
+        <div class="expertise-desc block-i18n"><span data-en>Secure REST architectures connecting ERPNext, third-party platforms, and client-facing apps.</span><span data-ar>معماريات REST آمنة تربط ERPNext بمنصات خارجية وتطبيقات تواجه العملاء.</span></div>
+        <div class="expertise-outcome block-i18n"><ion-icon name="checkmark-circle-outline"></ion-icon><span data-en>8 production integrations</span><span data-ar>8 تكاملات إنتاج فعلية</span></div>
+      </div>
+
+      <div class="expertise-card reveal">
+        <div class="exp-icon-box" style="background:linear-gradient(135deg,#30CFD0,#330867)"><ion-icon name="briefcase-outline"></ion-icon></div>
+        <div class="expertise-title block-i18n"><span data-en>Digital Transformation Advisory</span><span data-ar>استشارات التحول الرقمي</span></div>
+        <div class="expertise-desc block-i18n"><span data-en>Executive workshops translating operational needs into phased technical roadmaps.</span><span data-ar>ورش عمل تنفيذية تترجم الاحتياجات التشغيلية إلى خرائط طريق تقنية مرحلية.</span></div>
+        <div class="expertise-outcome block-i18n"><ion-icon name="checkmark-circle-outline"></ion-icon><span data-en>C-suite stakeholder buy-in</span><span data-ar>موافقة الإدارة التنفيذية العليا</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ZATCA DEPTH (signature) ============ -->
+<section class="depth-section" id="depth">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">03</span><span class="s-tag-label"><span data-en>Specialization Depth</span><span data-ar>عمق التخصص</span></span></div>
+      <h2 class="s-h reveal block-i18n">
+        <span data-en>Where most developers stop, <em>this is where I start.</em></span>
+        <span data-ar>حيث يتوقف معظم المطورين، <em>هنا أبدأ أنا.</em></span>
+      </h2>
+      <p class="s-p reveal block-i18n">
+        <span data-en>ZATCA compliance isn't a checkbox feature — it requires cryptographic precision.</span>
+        <span data-ar>امتثال ZATCA ليس ميزة سطحية — يتطلب دقة تشفيرية حقيقية.</span>
+      </p>
+    </div>
+
+    <div class="depth-grid">
+      <div class="depth-visual reveal">
+        <div class="depth-card" id="depthCard">
+          <div class="depth-card-head">
+            <div class="depth-icon"><ion-icon name="shield-checkmark-outline"></ion-icon></div>
+            <div>
+              <div class="depth-card-title block-i18n"><span data-en>ZATCA Phase 1 &amp; 2 Stack</span><span data-ar>منظومة ZATCA المرحلتين 1 و2</span></div>
+              <div class="depth-card-sub">Live implementation specs</div>
+            </div>
+          </div>
+          <div class="depth-row"><span class="depth-row-label block-i18n"><span data-en>XML Standard</span><span data-ar>معيار XML</span></span><span class="depth-row-val">UBL 2.1</span></div>
+          <div class="depth-row"><span class="depth-row-label block-i18n"><span data-en>Cryptographic Stamping</span><span data-ar>التوقيع التشفيري</span></span><span class="depth-row-val">ECDSA</span></div>
+          <div class="depth-row"><span class="depth-row-label block-i18n"><span data-en>QR Encoding</span><span data-ar>ترميز QR</span></span><span class="depth-row-val">TLV</span></div>
+          <div class="depth-row"><span class="depth-row-label block-i18n"><span data-en>Portal Integration</span><span data-ar>تكامل البوابة</span></span><span class="depth-row-val">FATOORA API</span></div>
+          <div class="depth-row"><span class="depth-row-label block-i18n"><span data-en>Clients Compliant</span><span data-ar>عملاء ممتثلون</span></span><span class="depth-row-val">3 Saudi Orgs</span></div>
+        </div>
+      </div>
+
+      <div class="depth-points reveal">
+        <div class="depth-point">
+          <div class="depth-point-num">01</div>
+          <div>
+            <div class="depth-point-title block-i18n"><span data-en>4 End-to-End ERPNext Go-Lives</span><span data-ar>4 تنفيذات ERPNext كاملة</span></div>
+            <div class="depth-point-desc block-i18n"><span data-en>Manufacturing, trading, real estate, and healthcare — full lifecycle through data migration and training.</span><span data-ar>تصنيع، تجارة، عقارات، رعاية صحية — دورة كاملة حتى ترحيل البيانات والتدريب.</span></div>
+          </div>
+        </div>
+        <div class="depth-point">
+          <div class="depth-point-num">02</div>
+          <div>
+            <div class="depth-point-title block-i18n"><span data-en>Custom Frappe Engineering</span><span data-ar>هندسة Frappe مخصصة</span></div>
+            <div class="depth-point-desc block-i18n"><span data-en>Multi-branch accounting consolidation and automated VAT reports built for GCC requirements.</span><span data-ar>دمج محاسبي متعدد الفروع وتقارير ضريبة القيمة المضافة الآلية — مبنية لمتطلبات الخليج.</span></div>
+          </div>
+        </div>
+        <div class="depth-point">
+          <div class="depth-point-num">03</div>
+          <div>
+            <div class="depth-point-title block-i18n"><span data-en>Measured, Not Claimed, Results</span><span data-ar>نتائج مُقاسة، وليست مُدّعاة</span></div>
+            <div class="depth-point-desc block-i18n"><span data-en>A custom GL script report cut month-end close from 3 days to under 4 hours — 88% reduction, SAR 40,000 saved.</span><span data-ar>تقرير دفتر أستاذ مخصص قلّص الإغلاق الشهري من 3 أيام لأقل من 4 ساعات — تقليل 88%، توفير 40,000 ريال.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE TIMELINE ============ -->
+<section id="experience">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">04</span><span class="s-tag-label"><span data-en>Career Path</span><span data-ar>المسيرة المهنية</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>Five roles, <em>one clear trajectory.</em></span><span data-ar>خمسة أدوار، <em>مسار واضح واحد.</em></span></h2>
+      <p class="s-p reveal block-i18n"><span data-en>Each role framed by challenge, contribution, and result — not a duty list.</span><span data-ar>كل دور موضّح بالتحدي والمساهمة والنتيجة — وليس قائمة مهام.</span></p>
+    </div>
+
+    <div class="timeline-wrap reveal">
+      <div class="timeline-line" aria-hidden="true"></div>
+
+      <div class="t-item">
+        <div class="t-dot" aria-hidden="true"></div>
+        <div class="t-card" onclick="this.classList.toggle('open')">
+          <div class="t-period">Dec 2025 — Present</div>
+          <div class="t-title block-i18n"><span data-en>Full Stack Developer</span><span data-ar>مطوّر Full Stack</span></div>
+          <div class="t-company">Nordic Biz Hub · Sweden · Contract / Remote</div>
+          <div class="t-challenge-row"><span class="t-chal-badge block-i18n"><span data-en>European Market</span><span data-ar>السوق الأوروبي</span></span></div>
+          <div class="t-desc block-i18n"><span data-en>Building client-facing platforms in Laravel integrated with ERPNext, plus AI-assisted automation using n8n and OpenAI APIs.</span><span data-ar>بناء منصات للعملاء بـLaravel مدمجة مع ERPNext، إلى جانب أتمتة بمساعدة الذكاء الاصطناعي عبر n8n وOpenAI.</span></div>
+          <div class="t-tags"><span class="t-tag">Laravel</span><span class="t-tag">ERPNext</span><span class="t-tag">n8n</span><span class="t-tag">OpenAI API</span></div>
+          <div class="t-expand"><span data-en>Show details</span><span data-ar>عرض التفاصيل</span><ion-icon name="chevron-down-outline"></ion-icon></div>
+          <div class="t-detail">
+            <ul class="t-detail-list block-i18n">
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Customized ERPNext modules supporting finance, operations, and CRM workflows across client projects.</span><span data-ar>تخصيص وحدات ERPNext لدعم سير عمل المالية والعمليات وCRM.</span></li>
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Designed automation pipelines synchronizing data, notifications, and approvals across business functions.</span><span data-ar>تصميم خطوط أتمتة لمزامنة البيانات والإشعارات والموافقات.</span></li>
+            </ul>
+            <div class="t-result-banner"><ion-icon name="trending-up-outline"></ion-icon><span data-en>Active engagement, ongoing platform expansion</span><span data-ar>تعاون نشط، توسع مستمر في المنصة</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot" aria-hidden="true"></div>
+        <div class="t-card" onclick="this.classList.toggle('open')">
+          <div class="t-period">May — Oct 2025</div>
+          <div class="t-title block-i18n"><span data-en>Full Stack Developer</span><span data-ar>مطوّر Full Stack</span></div>
+          <div class="t-company">Al-Jasim Law Firm · Kuwait · Contract / Remote</div>
+          <div class="t-challenge-row"><span class="t-chal-badge block-i18n"><span data-en>Legal Sector Automation</span><span data-ar>أتمتة القطاع القانوني</span></span></div>
+          <div class="t-desc block-i18n"><span data-en>Built a custom platform streamlining client engagement and case management, with AI-powered document classification.</span><span data-ar>بناء منصة مخصصة لتبسيط تفاعل العملاء وإدارة القضايا، مع تصنيف مستندات بالذكاء الاصطناعي.</span></div>
+          <div class="t-tags"><span class="t-tag">PHP</span><span class="t-tag">n8n</span><span class="t-tag">OpenAI API</span><span class="t-tag">WhatsApp API</span></div>
+          <div class="t-expand"><span data-en>Show details</span><span data-ar>عرض التفاصيل</span><ion-icon name="chevron-down-outline"></ion-icon></div>
+          <div class="t-detail">
+            <ul class="t-detail-list block-i18n">
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Connected the public website to the firm's internal system via REST APIs and business logic modules.</span><span data-ar>ربط الموقع العام بالنظام الداخلي للمكتب عبر REST APIs ووحدات منطق الأعمال.</span></li>
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Automated client intake, case notifications, and billing using n8n and WhatsApp Business API.</span><span data-ar>أتمتة استقبال العملاء وإشعارات القضايا والفوترة عبر n8n وWhatsApp Business API.</span></li>
+            </ul>
+            <div class="t-result-banner"><ion-icon name="trending-up-outline"></ion-icon><span data-en>Significant reduction in manual administrative effort</span><span data-ar>تقليل كبير في الجهد الإداري اليدوي</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot" aria-hidden="true"></div>
+        <div class="t-card" onclick="this.classList.toggle('open')">
+          <div class="t-period">Oct 2024 — Mar 2025</div>
+          <div class="t-title block-i18n"><span data-en>ERPNext &amp; Frappe Developer</span><span data-ar>مطوّر ERPNext وFrappe</span></div>
+          <div class="t-company">Sky Star · Saudi Arabia · Contract / Remote</div>
+          <div class="t-challenge-row"><span class="t-chal-badge block-i18n"><span data-en>Multi-Sector ERP Rollout</span><span data-ar>طرح ERP متعدد القطاعات</span></span></div>
+          <div class="t-desc block-i18n"><span data-en>Led 4 end-to-end ERPNext implementations and directed ZATCA Phase 1 &amp; 2 compliance for 3 Saudi clients — ahead of mandated deadlines.</span><span data-ar>قيادة 4 تنفيذات ERPNext كاملة وإدارة امتثال ZATCA المرحلتين 1 و2 لـ3 عملاء سعوديين — قبل المواعيد الإلزامية.</span></div>
+          <div class="t-tags"><span class="t-tag">ERPNext v14/v15</span><span class="t-tag">Frappe</span><span class="t-tag">ZATCA API</span><span class="t-tag">MariaDB</span></div>
+          <div class="t-expand"><span data-en>Show details</span><span data-ar>عرض التفاصيل</span><ion-icon name="chevron-down-outline"></ion-icon></div>
+          <div class="t-detail">
+            <ul class="t-detail-list block-i18n">
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Directed requirements workshops through go-live across manufacturing, trading, real estate, and healthcare.</span><span data-ar>إدارة ورش المتطلبات حتى التشغيل الفعلي عبر التصنيع والتجارة والعقارات والرعاية الصحية.</span></li>
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Engineered the GL Voucher Detail report that cut month-end close by 88%.</span><span data-ar>هندسة تقرير تفاصيل سند دفتر الأستاذ الذي قلّص الإغلاق الشهري 88%.</span></li>
+            </ul>
+            <div class="t-result-banner"><ion-icon name="trending-up-outline"></ion-icon><span data-en>SAR 40,000 annual savings · 88% close-time reduction</span><span data-ar>توفير 40,000 ريال سنوياً · تقليل 88% في وقت الإغلاق</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot" aria-hidden="true"></div>
+        <div class="t-card" onclick="this.classList.toggle('open')">
+          <div class="t-period">May 2022 — Present</div>
+          <div class="t-title block-i18n"><span data-en>Senior Full Stack Developer</span><span data-ar>مطوّر Full Stack أول</span></div>
+          <div class="t-company">Global Dev Gate · Egypt · On-site</div>
+          <div class="t-challenge-row"><span class="t-chal-badge block-i18n"><span data-en>Enterprise Solutions Transition</span><span data-ar>الانتقال لحلول المؤسسات</span></span></div>
+          <div class="t-desc block-i18n"><span data-en>Designed full-stack applications in Laravel and React, then transitioned into the enterprise solutions team building ERPNext for GCC clients.</span><span data-ar>تصميم تطبيقات Full Stack بـLaravel وReact، ثم الانتقال لفريق الحلول المؤسسية لبناء ERPNext لعملاء الخليج.</span></div>
+          <div class="t-tags"><span class="t-tag">Laravel</span><span class="t-tag">React.js</span><span class="t-tag">ERPNext</span><span class="t-tag">JWT/OAuth2</span></div>
+          <div class="t-expand"><span data-en>Show details</span><span data-ar>عرض التفاصيل</span><ion-icon name="chevron-down-outline"></ion-icon></div>
+          <div class="t-detail">
+            <ul class="t-detail-list block-i18n">
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Built RESTful API architectures with JWT, OAuth2, versioning, and rate-limiting across production apps.</span><span data-ar>بناء معماريات REST API مع JWT وOAuth2 والإصدارات وتحديد المعدل.</span></li>
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Designed responsive frontends with full Arabic RTL support for GCC client deployments.</span><span data-ar>تصميم واجهات متجاوبة بدعم كامل للعربية RTL لعملاء الخليج.</span></li>
+            </ul>
+            <div class="t-result-banner"><ion-icon name="trending-up-outline"></ion-icon><span data-en>Over 4 years continuous tenure, current employer</span><span data-ar>أكثر من 4 سنوات خبرة مستمرة، صاحب العمل الحالي</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="t-item">
+        <div class="t-dot" aria-hidden="true"></div>
+        <div class="t-card" onclick="this.classList.toggle('open')">
+          <div class="t-period">Oct 2019 — May 2022</div>
+          <div class="t-title block-i18n"><span data-en>Full Stack Developer</span><span data-ar>مطوّر Full Stack</span></div>
+          <div class="t-company">BNTown · Egypt · On-site</div>
+          <div class="t-challenge-row"><span class="t-chal-badge block-i18n"><span data-en>Foundational Engineering</span><span data-ar>التأسيس الهندسي</span></span></div>
+          <div class="t-desc block-i18n"><span data-en>Built and maintained custom web applications for clients across real estate, e-commerce, healthcare, and professional services.</span><span data-ar>بناء وصيانة تطبيقات ويب مخصصة لعملاء العقارات والتجارة الإلكترونية والرعاية الصحية والخدمات المهنية.</span></div>
+          <div class="t-tags"><span class="t-tag">Laravel</span><span class="t-tag">React.js</span><span class="t-tag">MySQL</span></div>
+          <div class="t-expand"><span data-en>Show details</span><span data-ar>عرض التفاصيل</span><ion-icon name="chevron-down-outline"></ion-icon></div>
+          <div class="t-detail">
+            <ul class="t-detail-list block-i18n">
+              <li><ion-icon name="checkmark-circle"></ion-icon><span data-en>Developed backend modules, database structures, and business workflows from the ground up.</span><span data-ar>تطوير وحدات خلفية وهياكل قواعد بيانات وسير عمل تجاري من الصفر.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PORTFOLIO / CASE STUDIES ============ -->
+<section class="bg-alt" id="portfolio">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">05</span><span class="s-tag-label"><span data-en>Featured Case Studies</span><span data-ar>دراسات حالة مختارة</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>Systems built to <em>solve, not impress.</em></span><span data-ar>أنظمة بُنيت لـ<em>تحل المشكلة، لا لتُبهر.</em></span></h2>
+      <p class="s-p reveal block-i18n"><span data-en>Selected from 69 public repositories, each shipped to production with a measurable outcome.</span><span data-ar>مُختارة من 69 مستودعاً عاماً، كل منها وصل للإنتاج بنتيجة قابلة للقياس.</span></p>
+    </div>
+
+    <div class="filters reveal">
+      <button class="filter-btn active" onclick="filterProjects('all')" data-i18n-text='{"en":"All Projects","ar":"كل المشاريع"}'>All Projects</button>
+      <button class="filter-btn" onclick="filterProjects('erp')" data-i18n-text='{"en":"ERP / Frappe","ar":"ERP / Frappe"}'>ERP / Frappe</button>
+      <button class="filter-btn" onclick="filterProjects('automation')" data-i18n-text='{"en":"AI &amp; Automation","ar":"أتمتة وذكاء اصطناعي"}'>AI & Automation</button>
+      <button class="filter-btn" onclick="filterProjects('web')" data-i18n-text='{"en":"Web Platforms","ar":"منصات ويب"}'>Web Platforms</button>
+    </div>
+
+    <div class="project-grid reveal" id="projectGrid"></div>
+  </div>
+</section>
+
+<!-- ============ GITHUB ============ -->
+<section id="github">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">06</span><span class="s-tag-label"><span data-en>Open Source Activity</span><span data-ar>نشاط المصدر المفتوح</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>Consistency you can <em>verify yourself.</em></span><span data-ar>اتساق يمكنك <em>التحقق منه بنفسك.</em></span></h2>
+    </div>
+    <div class="gh-card reveal">
+      <div class="gh-stat"><div class="gh-stat-num">69</div><div class="gh-stat-label block-i18n"><span data-en>Public Repositories</span><span data-ar>مستودع عام</span></div></div>
+      <div class="gh-divider"></div>
+      <div class="gh-stat"><div class="gh-stat-num">669</div><div class="gh-stat-label block-i18n"><span data-en>Contributions (Last Year)</span><span data-ar>مساهمة (آخر سنة)</span></div></div>
+      <div class="gh-divider"></div>
+      <div class="gh-stat"><div class="gh-stat-num">36</div><div class="gh-stat-label block-i18n"><span data-en>Commits This Month</span><span data-ar>كوميت هذا الشهر</span></div></div>
+      <div class="gh-divider"></div>
+      <div class="gh-cta">
+        <a href="https://github.com/moh222salah" target="_blank" class="btn-gold">
+          <ion-icon name="logo-github"></ion-icon><span data-en>View Profile</span><span data-ar>عرض الملف</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TECH STACK ============ -->
+<section class="bg-alt" id="stack">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">07</span><span class="s-tag-label"><span data-en>Toolkit</span><span data-ar>الأدوات</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>The stack <em>behind the delivery.</em></span><span data-ar>المنظومة <em>خلف كل تسليم.</em></span></h2>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-cat reveal">
+        <div class="stack-cat-head">
+          <div class="stack-cat-icon" style="background:linear-gradient(135deg,#0089FF,#00D4FF)"><ion-icon name="cube-outline"></ion-icon></div>
+          <div class="stack-cat-title block-i18n"><span data-en>ERP &amp; Digital Transformation</span><span data-ar>ERP والتحول الرقمي</span></div>
+        </div>
+        <div class="stack-items">
+          <div class="stack-item"><ion-icon name="layers-outline" style="color:#00D4FF"></ion-icon><span>ERPNext v14/v15/v16</span></div>
+          <div class="stack-item"><ion-icon name="construct-outline" style="color:#00D4FF"></ion-icon><span>Frappe Framework</span></div>
+          <div class="stack-item"><ion-icon name="shield-checkmark-outline" style="color:#2E9A7F"></ion-icon><span>ZATCA E-Invoicing</span></div>
+          <div class="stack-item"><ion-icon name="document-text-outline" style="color:#9AA3AE"></ion-icon><span>UBL 2.1 XML</span></div>
+        </div>
+      </div>
+
+      <div class="stack-cat reveal">
+        <div class="stack-cat-head">
+          <div class="stack-cat-icon" style="background:linear-gradient(135deg,#667eea,#764ba2)"><ion-icon name="desktop-outline"></ion-icon></div>
+          <div class="stack-cat-title block-i18n"><span data-en>Full Stack Engineering</span><span data-ar>هندسة Full Stack</span></div>
+        </div>
+        <div class="stack-items">
+          <div class="stack-item"><ion-icon name="logo-react" style="color:#61DAFB"></ion-icon><span>React.js</span></div>
+          <div class="stack-item"><ion-icon name="code-slash-outline" style="color:#FF2D20"></ion-icon><span>Laravel</span></div>
+          <div class="stack-item"><ion-icon name="logo-javascript" style="color:#F7DF1E"></ion-icon><span>TypeScript</span></div>
+          <div class="stack-item"><ion-icon name="color-palette-outline" style="color:#38BDF8"></ion-icon><span>TailwindCSS</span></div>
+        </div>
+      </div>
+
+      <div class="stack-cat reveal">
+        <div class="stack-cat-head">
+          <div class="stack-cat-icon" style="background:linear-gradient(135deg,#f093fb,#f5576c)"><ion-icon name="sparkles-outline"></ion-icon></div>
+          <div class="stack-cat-title block-i18n"><span data-en>AI Automation &amp; Intelligent Systems</span><span data-ar>الأتمتة بالذكاء الاصطناعي</span></div>
+        </div>
+        <div class="stack-items">
+          <div class="stack-item"><ion-icon name="git-merge-outline" style="color:#FF6C37"></ion-icon><span>n8n</span></div>
+          <div class="stack-item"><ion-icon name="chatbubbles-outline" style="color:#10A37F"></ion-icon><span>OpenAI API</span></div>
+          <div class="stack-item"><ion-icon name="documents-outline" style="color:#9AA3AE"></ion-icon><span>Document AI</span></div>
+          <div class="stack-item"><ion-icon name="logo-whatsapp" style="color:#25D366"></ion-icon><span>WhatsApp API</span></div>
+        </div>
+      </div>
+
+      <div class="stack-cat reveal">
+        <div class="stack-cat-head">
+          <div class="stack-cat-icon" style="background:linear-gradient(135deg,#fa709a,#fee140)"><ion-icon name="server-outline"></ion-icon></div>
+          <div class="stack-cat-title block-i18n"><span data-en>Database, Cloud &amp; DevOps</span><span data-ar>قواعد البيانات والسحابة وDevOps</span></div>
+        </div>
+        <div class="stack-items">
+          <div class="stack-item"><ion-icon name="logo-python" style="color:#3776AB"></ion-icon><span>Python</span></div>
+          <div class="stack-item"><ion-icon name="server-outline" style="color:#9AA3AE"></ion-icon><span>MariaDB / MySQL</span></div>
+          <div class="stack-item"><ion-icon name="cube-outline" style="color:#2496ED"></ion-icon><span>Docker</span></div>
+          <div class="stack-item"><ion-icon name="cloud-outline" style="color:#FF9900"></ion-icon><span>AWS <small style="opacity:.6">(roadmap)</small></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEADERSHIP & CONSULTING ============ -->
+<section id="leadership">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">08</span><span class="s-tag-label"><span data-en>Leadership &amp; Consulting</span><span data-ar>القيادة والاستشارات</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>Beyond the code: <em>how I lead delivery.</em></span><span data-ar>أبعد من الكود: <em>كيف أقود التسليم.</em></span></h2>
+    </div>
+    <div class="leadership-grid">
+      <div class="lead-card reveal">
+        <div class="lead-icon"><ion-icon name="people-circle-outline"></ion-icon></div>
+        <div class="lead-title block-i18n"><span data-en>Executive Stakeholder Workshops</span><span data-ar>ورش عمل مع الإدارة التنفيذية</span></div>
+        <div class="lead-desc block-i18n"><span data-en>Direct workshops with C-suite and department heads, mapping operational requirements onto phased ERP implementation roadmaps.</span><span data-ar>ورش مباشرة مع الإدارة العليا ورؤساء الأقسام، لترجمة المتطلبات التشغيلية إلى خرائط تنفيذ ERP مرحلية.</span></div>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-icon"><ion-icon name="swap-horizontal-outline"></ion-icon></div>
+        <div class="lead-title block-i18n"><span data-en>Change Management</span><span data-ar>إدارة التغيير</span></div>
+        <div class="lead-desc block-i18n"><span data-en>Coordinated training and adoption programs across accounting, operations, procurement, and HR teams.</span><span data-ar>تنسيق برامج تدريب وتبني عبر فرق المحاسبة والعمليات والمشتريات والموارد البشرية.</span></div>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-icon"><ion-icon name="search-outline"></ion-icon></div>
+        <div class="lead-title block-i18n"><span data-en>Requirements &amp; Solution Discovery</span><span data-ar>اكتشاف المتطلبات والحلول</span></div>
+        <div class="lead-desc block-i18n"><span data-en>Leading requirements analysis and solution design across manufacturing, trading, real estate, and healthcare sectors.</span><span data-ar>قيادة تحليل المتطلبات وتصميم الحلول عبر قطاعات التصنيع والتجارة والعقارات والرعاية الصحية.</span></div>
+      </div>
+      <div class="lead-card reveal">
+        <div class="lead-icon"><ion-icon name="git-network-outline"></ion-icon></div>
+        <div class="lead-title block-i18n"><span data-en>Cross-Functional Delivery</span><span data-ar>تسليم متعدد الوظائف</span></div>
+        <div class="lead-desc block-i18n"><span data-en>Contributing to technical architecture decisions and code reviews across cross-functional product teams.</span><span data-ar>المساهمة في قرارات المعمارية التقنية ومراجعات الكود عبر فرق منتج متعددة الوظائف.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CERTIFICATIONS ============ -->
+<section class="bg-alt" id="certs">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">09</span><span class="s-tag-label"><span data-en>Verified Credentials</span><span data-ar>شهادات موثقة</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>Formal training <em>behind the practice.</em></span><span data-ar>تدريب رسمي <em>خلف الممارسة.</em></span></h2>
+    </div>
+    <div class="cert-grid reveal">
+      <div class="cert-card"><div class="cert-badge"><ion-icon name="ribbon-outline"></ion-icon></div><div><div class="cert-name">ERPNext Implementation Consultant &amp; Localization</div><div class="cert-issuer">Frappe</div></div></div>
+      <div class="cert-card"><div class="cert-badge"><ion-icon name="ribbon-outline"></ion-icon></div><div><div class="cert-name">ERPNext Functional Consultant</div><div class="cert-issuer">Frappe</div></div></div>
+      <div class="cert-card"><div class="cert-badge"><ion-icon name="ribbon-outline"></ion-icon></div><div><div class="cert-name">Full Stack Frappe Framework Developer</div><div class="cert-issuer">Frappe</div></div></div>
+      <div class="cert-card"><div class="cert-badge"><ion-icon name="ribbon-outline"></ion-icon></div><div><div class="cert-name">IT Automation with Python</div><div class="cert-issuer">Google · 2025</div></div></div>
+      <div class="cert-card"><div class="cert-badge"><ion-icon name="ribbon-outline"></ion-icon></div><div><div class="cert-name">Cloud Flows in Power Automate</div><div class="cert-issuer">Microsoft · 2025</div></div></div>
+      <div class="cert-card"><div class="cert-badge"><ion-icon name="ribbon-outline"></ion-icon></div><div><div class="cert-name">n8n: Build Intelligent AI Agent Systems</div><div class="cert-issuer">Udemy · 2025</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact">
+  <div class="s-inner">
+    <div class="s-head">
+      <div class="s-tag reveal"><span class="s-tag-num">10</span><span class="s-tag-label"><span data-en>Get In Touch</span><span data-ar>تواصل معي</span></span></div>
+      <h2 class="s-h reveal block-i18n"><span data-en>Let's discuss how technology can <em>accelerate your growth.</em></span><span data-ar>لنتحدث عن كيف يمكن للتقنية أن <em>تسرّع نمو أعمالك.</em></span></h2>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <form onsubmit="sendToWhatsApp(event)">
+          <div class="form-group">
+            <label class="form-label block-i18n"><span data-en>Full Name</span><span data-ar>الاسم الكامل</span></label>
+            <input type="text" id="cName" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label block-i18n"><span data-en>Project Type</span><span data-ar>نوع المشروع</span></label>
+            <select id="cService" class="form-input">
+              <option>ERPNext Implementation</option>
+              <option>ZATCA Compliance</option>
+              <option>Custom Web Application</option>
+              <option>AI Process Automation</option>
+              <option>Technical Consultation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label block-i18n"><span data-en>Brief Description</span><span data-ar>وصف مختصر</span></label>
+            <textarea id="cMsg" class="form-input" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">
+            <span data-en>Start Conversation</span><span data-ar>ابدأ المحادثة</span>
+            <ion-icon name="logo-whatsapp"></ion-icon>
+          </button>
+        </form>
+      </div>
+
+      <div class="contact-info-list reveal">
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><ion-icon name="call-outline"></ion-icon></div>
+          <div><div class="cinfo-label block-i18n"><span data-en>Phone / WhatsApp</span><span data-ar>الهاتف / واتساب</span></div><div class="cinfo-val" dir="ltr">+20 111 390 3070</div></div>
+        </div>
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><ion-icon name="mail-outline"></ion-icon></div>
+          <div><div class="cinfo-label block-i18n"><span data-en>Email</span><span data-ar>البريد الإلكتروني</span></div><div class="cinfo-val" dir="ltr">moh222salah@gmail.com</div></div>
+        </div>
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><ion-icon name="location-outline"></ion-icon></div>
+          <div><div class="cinfo-label block-i18n"><span data-en>Base Location</span><span data-ar>الموقع الأساسي</span></div><div class="cinfo-val block-i18n"><span data-en>Giza, Egypt</span><span data-ar>الجيزة، مصر</span></div></div>
+        </div>
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><ion-icon name="logo-linkedin"></ion-icon></div>
+          <div><div class="cinfo-label">LinkedIn</div><div class="cinfo-val" dir="ltr">linkedin.com/in/mo222salah</div></div>
+        </div>
+        <div class="cinfo-card">
+          <div class="cinfo-icon"><ion-icon name="logo-github"></ion-icon></div>
+          <div><div class="cinfo-label">GitHub</div><div class="cinfo-val" dir="ltr">github.com/moh222salah</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="f-inner">
+    <div class="f-cols">
+      <div>
+        <div class="f-logo">Mohamed <span>Salah</span></div>
+        <p class="f-desc block-i18n"><span data-en>Senior Full Stack &amp; ERPNext Developer delivering compliant, scalable enterprise systems across Egypt and the GCC.</span><span data-ar>مطوّر Full Stack وERPNext أول، يقدّم أنظمة مؤسسية متوافقة وقابلة للتوسع عبر مصر ودول الخليج.</span></p>
+      </div>
+      <div>
+        <div class="f-col-title block-i18n"><span data-en>Quick Links</span><span data-ar>روابط سريعة</span></div>
+        <div class="f-links">
+          <a href="#experience" data-en>Experience</a><a href="#experience" data-ar>المسيرة</a>
+          <a href="#portfolio" data-en>Case Studies</a><a href="#portfolio" data-ar>دراسات الحالة</a>
+          <a href="https://github.com/moh222salah" target="_blank">GitHub</a>
+        </div>
+      </div>
+      <div>
+        <div class="f-col-title block-i18n"><span data-en>Connect</span><span data-ar>تواصل</span></div>
+        <div class="f-social">
+          <a href="https://linkedin.com/in/mo222salah" target="_blank" aria-label="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a>
+          <a href="https://github.com/moh222salah" target="_blank" aria-label="GitHub"><ion-icon name="logo-github"></ion-icon></a>
+          <a href="https://wa.me/201113903070" target="_blank" aria-label="WhatsApp"><ion-icon name="logo-whatsapp"></ion-icon></a>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">&copy; 2026 Mohamed Salah Ahmed · All Rights Reserved</div>
+  </div>
+</footer>
+
+<nav class="mn-nav">
+  <a href="#hero" class="mn-item"><ion-icon name="home-outline"></ion-icon><span data-en>Home</span><span data-ar>الرئيسية</span></a>
+  <a href="#experience" class="mn-item"><ion-icon name="briefcase-outline"></ion-icon><span data-en>Work</span><span data-ar>الخبرة</span></a>
+  <a href="#portfolio" class="mn-item"><ion-icon name="layers-outline"></ion-icon><span data-en>Projects</span><span data-ar>المشاريع</span></a>
+  <a href="#contact" class="mn-item"><ion-icon name="chatbubble-outline"></ion-icon><span data-en>Contact</span><span data-ar>تواصل</span></a>
+</nav>
+
+<a href="https://wa.me/201113903070" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <ion-icon name="logo-whatsapp"></ion-icon>
+</a>
+
+<div id="projectModal" class="modal">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close"><ion-icon name="close-outline"></ion-icon></button>
+    <div class="modal-content-inner">
+      <div class="modal-cat" id="mCat"></div>
+      <div class="modal-title" id="mTitle"></div>
+      <p class="modal-desc" id="mDesc"></p>
+      <div class="modal-impact" id="mImpactWrap" style="display:none">
+        <ion-icon name="trending-up-outline"></ion-icon>
+        <span id="mImpact"></span>
+      </div>
+      <div class="modal-tags" id="mTags"></div>
+      <div class="modal-actions">
+        <a href="#" id="mLink" target="_blank" class="btn-gold"><span data-en>Visit Live Demo</span><span data-ar>زيارة العرض التجريبي</span><ion-icon name="open-outline"></ion-icon></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== DATA: projects selected from CV + verified GitHub repos ===== */
+const projects = [
+  {
+    id:1, cat:'erp', icon:'shield-checkmark-outline',
+    title:{en:'ZATCA Compliance & E-Invoicing Suite', ar:'منظومة امتثال ZATCA والفوترة الإلكترونية'},
+    desc:{en:'A complete ZATCA Phase 1 & 2 e-invoicing solution within ERPNext — UBL 2.1 XML generation, ECDSA cryptographic stamping, TLV QR encoding, and FATOORA API integration.', ar:'حل فوترة إلكترونية كامل للمرحلتين 1 و2 من ZATCA داخل ERPNext — توليد XML بمعيار UBL 2.1، توقيع تشفيري ECDSA، وتكامل FATOORA API.'},
+    impact:{en:'Clients achieved full regulatory compliance ahead of mandated deadlines', ar:'حقق العملاء امتثالاً تنظيمياً كاملاً قبل المواعيد الإلزامية'},
+    tags:['ERPNext v14/15/16','UBL 2.1 XML','ECDSA','Python'],
+    link:'https://moh222salah.github.io/ZATCA'
+  },
+  {
+    id:2, cat:'erp', icon:'business-outline',
+    title:{en:'VIP ACC System — Multi-Tenant Accounting ERP', ar:'نظام VIP ACC — منصة ERP محاسبية متعددة المستأجرين'},
+    desc:{en:'A fully custom multi-tenant SaaS accounting platform built from the ground up for SMEs — centralized financial management, reporting, and role-based access at scale.', ar:'منصة محاسبية SaaS متعددة المستأجرين، مبنية بالكامل من الصفر للشركات الصغيرة والمتوسطة — إدارة مالية مركزية وصلاحيات حسب الدور.'},
+    impact:{en:'Eliminated spreadsheet-dependent accounting across client deployments', ar:'إلغاء الاعتماد على الجداول الحسابية عبر عمليات النشر للعملاء'},
+    tags:['PHP','MySQL','Multi-Tenant SaaS','RBAC'],
+    link:'https://moh222salah.github.io/vipaccsystem'
+  },
+  {
+    id:3, cat:'erp', icon:'git-network-outline',
+    title:{en:'ERP Integration Bridge — Legacy to ERPNext', ar:'جسر تكامل ERP — من النظام القديم إلى ERPNext'},
+    desc:{en:'A middleware integration layer connecting a legacy enterprise system with ERPNext, enabling phased migration without disrupting live operations.', ar:'طبقة تكامل وسيطة تربط نظاماً مؤسسياً قديماً بـERPNext، تتيح ترحيلاً مرحلياً دون تعطيل العمليات الفعلية.'},
+    impact:{en:'Zero-downtime migration path for an active production system', ar:'مسار ترحيل بدون توقف لنظام إنتاج فعّال'},
+    tags:['ERPNext','REST API','System Integration','Python'],
+    link:'https://moh222salah.github.io/erp-vinditbridge'
+  },
+  {
+    id:4, cat:'erp', icon:'analytics-outline',
+    title:{en:'ERPNext Implementation — Sky Star Saudi Engagement', ar:'تنفيذ ERPNext — تعاقد Sky Star السعودي'},
+    desc:{en:'Reference implementation demonstrating the custom Frappe modules and reporting architecture delivered during the Sky Star (Saudi Arabia) engagement.', ar:'تنفيذ مرجعي يوضح وحدات Frappe المخصصة ومعمارية التقارير المُسلَّمة خلال تعاقد Sky Star بالسعودية.'},
+    impact:{en:'Reference build behind the 88% close-time reduction case', ar:'البناء المرجعي خلف حالة تقليل 88% في وقت الإغلاق'},
+    tags:['ERPNext v15','MariaDB','Frappe','SQL Optimization'],
+    link:'https://moh222salah.github.io/erp-sky'
+  },
+  {
+    id:5, cat:'automation', icon:'git-merge-outline',
+    title:{en:'AutoFlow — n8n Business Process Automation', ar:'AutoFlow — أتمتة عمليات الأعمال عبر n8n'},
+    desc:{en:'A reusable automation framework built on n8n for connecting CRMs, notifications, and document pipelines across client business functions.', ar:'إطار أتمتة قابل لإعادة الاستخدام مبني على n8n لربط أنظمة CRM والإشعارات وخطوط المستندات عبر وظائف الأعمال.'},
+    impact:{en:'Core automation engine reused across multiple client engagements', ar:'محرك أتمتة أساسي أُعيد استخدامه عبر تعاقدات عملاء متعددة'},
+    tags:['n8n','Webhooks','Python','REST API'],
+    link:'https://moh222salah.github.io/autoflow'
+  },
+  {
+    id:6, cat:'web', icon:'trending-up-outline',
+    title:{en:'HuntersGrowth — Business Growth & CRM Platform', ar:'HuntersGrowth — منصة نمو الأعمال وCRM'},
+    desc:{en:'A full-stack CRM and growth-tracking platform demonstrating end-to-end product ownership beyond ERP-specific work.', ar:'منصة CRM وتتبع نمو Full Stack، توضح ملكية المنتج الكاملة بعيداً عن العمل المتخصص في ERP فقط.'},
+    impact:{en:'Demonstrates full-stack breadth beyond ERP specialization', ar:'يوضح اتساع خبرة Full Stack بعيداً عن تخصص ERP'},
+    tags:['Full Stack','CRM Architecture','Database Design'],
+    link:'https://moh222salah.github.io/huntersgrowth'
+  }
+];
+
+const I18N = {
+  cat: {erp:{en:'ERP / Frappe',ar:'ERP / Frappe'}, automation:{en:'AI & Automation',ar:'أتمتة وذكاء اصطناعي'}, web:{en:'Web Platform',ar:'منصة ويب'}}
+};
+
+let currentLang = localStorage.getItem('lang') || 'en';
+let currentFilter = 'all';
+
+function renderProjects(filter){
+  const grid = document.getElementById('projectGrid');
+  grid.innerHTML = '';
+  const list = filter === 'all' ? projects : projects.filter(p => p.cat === filter);
+  list.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'project-card';
+    card.onclick = () => openModal(p);
+    card.innerHTML = `
+      <div class="proj-top">
+        <div class="proj-cat-row">
+          <div class="proj-cat">${I18N.cat[p.cat][currentLang]}</div>
+          <div class="proj-live-badge"><div class="proj-live-dot"></div>${currentLang==='ar'?'مباشر':'LIVE'}</div>
+        </div>
+        <div class="proj-icon-box"><ion-icon name="${p.icon}"></ion-icon></div>
+        <div class="proj-title">${p.title[currentLang]}</div>
+        <div class="proj-desc">${p.desc[currentLang]}</div>
+      </div>
+      <div class="proj-bottom">
+        <div class="proj-impact"><ion-icon name="trending-up-outline"></ion-icon><span>${p.impact[currentLang]}</span></div>
+        <div class="proj-tags">${p.tags.slice(0,4).map(t=>`<span class="tag">${t}</span>`).join('')}</div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+function filterProjects(filter){
+  currentFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
+  const grid = document.getElementById('projectGrid');
+  grid.style.opacity = '0';
+  setTimeout(() => { renderProjects(filter); grid.style.opacity = '1'; }, 250);
+}
+
+function openModal(p){
+  document.getElementById('mCat').textContent = I18N.cat[p.cat][currentLang];
+  document.getElementById('mTitle').textContent = p.title[currentLang];
+  document.getElementById('mDesc').textContent = p.desc[currentLang];
+  const iw = document.getElementById('mImpactWrap');
+  if(p.impact){ document.getElementById('mImpact').textContent = p.impact[currentLang]; iw.style.display='flex'; }
+  else { iw.style.display='none'; }
+  document.getElementById('mTags').innerHTML = p.tags.map(t=>`<span class="tag" style="font-size:.78rem;padding:6px 13px;background:var(--bg-3);border-radius:100px;border:1px solid var(--line);color:var(--text-dim)">${t}</span>`).join('');
+  document.getElementById('mLink').href = p.link;
+  document.getElementById('projectModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal(){
+  document.getElementById('projectModal').classList.remove('active');
+  document.body.style.overflow = 'auto';
+}
+window.addEventListener('click', e => { if(e.target.id === 'projectModal') closeModal(); });
+
+/* ===== THEME ===== */
+const htmlRoot = document.getElementById('htmlRoot');
+const themeToggle = document.getElementById('themeToggle');
+const themeIcon = document.getElementById('themeIcon');
+let currentTheme = localStorage.getItem('theme') || 'dark';
+function setTheme(t){ htmlRoot.setAttribute('data-theme', t); themeIcon.setAttribute('name', t === 'dark' ? 'sunny-outline' : 'moon-outline'); localStorage.setItem('theme', t); }
+themeToggle.addEventListener('click', () => { currentTheme = currentTheme === 'dark' ? 'light' : 'dark'; setTheme(currentTheme); });
+
+/* ===== LANGUAGE ===== */
+const langToggle = document.getElementById('langToggle');
+const langLabel = document.getElementById('langLabel');
+function setLang(lang){
+  currentLang = lang;
+  htmlRoot.setAttribute('lang', lang);
+  htmlRoot.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  langLabel.textContent = lang === 'ar' ? 'EN' : 'AR';
+  document.querySelectorAll('[data-i18n-text]').forEach(el => {
+    const d = JSON.parse(el.getAttribute('data-i18n-text'));
+    el.textContent = d[lang];
+  });
+  renderProjects(currentFilter);
+  localStorage.setItem('lang', lang);
+}
+langToggle.addEventListener('click', () => setLang(currentLang === 'ar' ? 'en' : 'ar'));
+
+/* ===== INIT ===== */
+document.addEventListener('DOMContentLoaded', () => {
+  setTheme(currentTheme);
+  setLang(currentLang);
+  initScrollAnimations();
+  initDepthCardTilt();
+});
+
+function initScrollAnimations(){
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+}
+
+function initDepthCardTilt(){
+  const card = document.getElementById('depthCard');
+  if(!card) return;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduced || !window.matchMedia('(pointer: fine)').matches) return;
+  const wrap = card.closest('.depth-visual');
+  wrap.addEventListener('mousemove', e => {
+    const r = wrap.getBoundingClientRect();
+    const x = (e.clientX - r.left)/r.width - 0.5;
+    const y = (e.clientY - r.top)/r.height - 0.5;
+    card.style.transform = `rotateY(${x*8}deg) rotateX(${-y*8}deg)`;
+  });
+  wrap.addEventListener('mouseleave', () => { card.style.transform = 'rotateY(0deg) rotateX(0deg)'; });
+}
+
+const rail = document.getElementById('rail');
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  rail.style.width = (h.scrollTop/(h.scrollHeight-h.clientHeight)*100) + '%';
+}, { passive:true });
+
+function sendToWhatsApp(e){
+  e.preventDefault();
+  const name = document.getElementById('cName').value;
+  const service = document.getElementById('cService').value;
+  const msg = document.getElementById('cMsg').value;
+  const text = `Hi Mohamed, I'm ${name}.\nInterested in: ${service}.\n\nDetails: ${msg}`;
+  window.open(`https://wa.me/201113903070?text=${encodeURIComponent(text)}`, '_blank');
+}
+</script>
+</body>
+</html>
