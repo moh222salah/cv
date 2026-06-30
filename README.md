@@ -13,22 +13,6 @@
   <a href="https://wa.me/201113903070"><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/></a>
 </p>
 
----
-
-### 👨‍💻 About Me
-
-```javascript
-const mohamedSalah = {
-    role: "Full Stack Developer & ERP Specialist",
-    location: "Egypt 🇪🇬",
-    experience: "5+ years",
-    specialization: ["ERPNext", "Laravel", "React", "AI Automation"],
-    currentFocus: "Building intelligent ERP solutions",
-    funFact: "I turn complex business workflows into elegant code ✨"
-};
-```
-
-</div>
 
 ---
 
