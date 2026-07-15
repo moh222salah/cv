@@ -984,11 +984,6 @@ html[dir="rtl"] .cb-card:hover .cb-card-arrow{transform:translateX(-3px)}
           <span data-ar>متاح للعمل: عن بُعد <span class="ar-fallback"> </span></span>
         </div>
 
-        <div class="hero-name block-i18n">
-          <span data-en>𝗠𝗢𝗛𝗔𝗠𝗘𝗗 𝗦𝗔𝗟𝗔𝗛 👔</span>
-          <span data-ar>مـحـمـد صـلاح 👔</span>
-        </div>
-
         <h1 class="hero-h1 block-i18n">
           <span data-en>
             <span class="role-cycle"><span id="typewriter-line"></span><span class="tw-cursor"></span></span>
@@ -1017,8 +1012,8 @@ html[dir="rtl"] .cb-card:hover .cb-card-arrow{transform:translateX(-3px)}
           <div class="ring ring-1"></div>
           <div class="ring ring-2"></div>
           <div class="core-node">
-            <div class="core-num" style="font-size:clamp(1.4rem,4.5vw,2rem)">6</div>
-            <div style="font-size:clamp(.42rem,1.4vw,.58rem);letter-spacing:.13em;color:var(--verified-light);text-align:center;text-transform:uppercase;line-height:1.35;margin-top:2px">YEARS<br>ERP &amp;<br>FULL STACK</div>
+            <div class="core-num" style="font-size:clamp(1.4rem,4.5vw,2rem)"> Senior </div>
+            <div style="font-size:clamp(.42rem,1.4vw,.58rem);letter-spacing:.13em;color:var(--verified-light);text-align:center;text-transform:uppercase;line-height:1.35;margin-top:2px"><br> <br></div>
 
           </div>
           <div class="orbit-badge ob-1" title="ERPNext" style="--badge-glow:#00D4FF"><ion-icon name="layers-outline" style="color:#00D4FF"></ion-icon></div>
@@ -2586,18 +2581,16 @@ window.addEventListener('click', e => { if(e.target.id === 'projectModal') close
 (function(){
   const EN_HTML  = [
     'Senior Full Stack <em style="color:var(--gold)">Developer</em>',
-    'ERPNext / Frappe <em style="color:var(--gold)">Specialist</em>',
+    'ERPNext / Frappe <em style="color:var(--gold)">Developer</em>',
     'Business <em style="color:var(--gold)">Automation</em> Engineer',
-    'Digital <em style="color:var(--gold)">Transformation</em> Consultant',
   ];
-  const EN_PLAIN = ['Senior Full Stack Developer','ERPNext / Frappe Specialist','Business Automation Engineer','Digital Transformation Consultant'];
+  const EN_PLAIN = ['Senior Full Stack Developer','ERPNext / Frappe Developer','Business Automation Engineer'];
   const AR_HTML  = [
     'مطوّر برمجيات <em style="color:var(--gold)">متكامل</em>',
     'مطوّر أنظمة <em style="color:var(--gold)">ERP</em> وFrappe',
-    'متخصص <em style="color:var(--gold)">أتمتة الأعمال</em>',
-    'مستشار <em style="color:var(--gold)">التحول الرقمي</em>',
+    'مهندس <em style="color:var(--gold)">أتمتة الأعمال</em>',
   ];
-  const AR_PLAIN = ['مطوّر برمجيات متكامل','مطوّر أنظمة ERP وFrappe','متخصص أتمتة الأعمال','مستشار التحول الرقمي'];
+  const AR_PLAIN = ['مطوّر برمجيات متكامل','مطوّر أنظمة ERP وFrappe','مهندس أتمتة الأعمال','مستشار التحول الرقمي'];
   let riEN=0,riAR=0,runEN=false,runAR=false;
   const sleep = ms => new Promise(r => setTimeout(r,ms));
   const elEN  = () => document.getElementById('typewriter-line');
